@@ -1,0 +1,217 @@
+import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({super.key});
+
+  @override
+  _OnboardingScreenState createState() => _OnboardingScreenState();
+}
+
+class _OnboardingScreenState extends State<OnboardingScreen> {
+  final PageController _pageController = PageController();
+  int _currentPage = 0;
+
+  final List<Map<String, String>> onboardingData = [
+    {
+      "image": "assets/images/onboarding1.png",
+      "title": "Welcome to FixIt",
+      "description":
+          "Discover a world of convenience and reliability. FIXit is your one stop solution for all your home service needs",
+    },
+    {
+      "image": "assets/images/onboarding2.png",
+      "title": "Find Services",
+      "description":
+          "Browse and book a wide range of services from plumbing and electrical to appliance repair. We’ve got it all covered",
+    },
+    {
+      "image": "assets/images/onboarding3.png",
+      "title": "Find Services",
+      "description":
+          "Browse and book a wide range of services from plumbing and electrical to appliance repair. We’ve got it all covered",
+    },
+  ];
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [Colors.blue[900]!, Color(0xff00152A)],
+          ),
+        ),
+        child: SafeArea(
+          child: Stack(
+            children: [
+              PageView.builder(
+                controller: _pageController,
+                itemCount: onboardingData.length,
+                onPageChanged: (int page) {
+                  setState(() {
+                    _currentPage = page;
+                  });
+                },
+                itemBuilder: (context, index) {
+                  return OnboardingPage(
+                    image: onboardingData[index]["image"]!,
+                    title: onboardingData[index]["title"]!,
+                    description: onboardingData[index]["description"]!,
+                  );
+                },
+              ),
+              Positioned(
+                top: 20,
+                right: 20,
+                child: TextButton(
+                  onPressed: () {
+                    print("Skip pressed");
+                  },
+                  child: Text(
+                    "Skip",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: MediaQuery.of(context).size.height * 0.15,
+                left: 0,
+                right: 0,
+                child: Center(
+                  child: SmoothPageIndicator(
+                    controller: _pageController,
+                    count: onboardingData.length,
+                    effect: WormEffect(
+                      dotHeight: 8,
+                      dotWidth: 8,
+                      activeDotColor: Colors.white,
+                      dotColor: Colors.grey,
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: 30,
+                left: 20,
+                right: 20,
+                child: ElevatedButton(
+                  onPressed: () {
+                    if (_currentPage < onboardingData.length - 1) {
+                      _pageController.nextPage(
+                        duration: Duration(milliseconds: 300),
+                        curve: Curves.easeIn,
+                      );
+                    } else {
+                      print("Get Started pressed");
+                    }
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue[900],
+                    padding: EdgeInsets.symmetric(
+                      vertical: 15,
+                      horizontal: MediaQuery.of(context).size.width * 0.2,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  child: Text(
+                    _currentPage == onboardingData.length - 1
+                        ? "Get Started"
+                        : "Next",
+                    style: TextStyle(fontSize: 18, color: Colors.white),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class OnboardingPage extends StatelessWidget {
+  final String image;
+  final String title;
+  final String description;
+
+  const OnboardingPage({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.description,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return Container(
+          decoration: BoxDecoration(
+            color: Colors.transparent, // Remove solid blue background
+            borderRadius: BorderRadius.circular(20),
+          ),
+          margin: EdgeInsets.all(10),
+          child: Column(
+            children: [
+              SizedBox(height: 60), // Space for the status bar and skip button
+              Expanded(
+                flex: 3,
+                child: Container(
+                  margin: EdgeInsets.symmetric(
+                    horizontal: constraints.maxWidth * 0.05,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    image: DecorationImage(
+                      image: AssetImage(image),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 20,
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        title,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        description,
+                        style: TextStyle(color: Colors.white70, fontSize: 18),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+}
