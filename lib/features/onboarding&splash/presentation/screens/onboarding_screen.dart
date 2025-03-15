@@ -1,7 +1,8 @@
-import 'package:fixit_app/features/auth/presentation/screens/SignIn_screen.dart';
-import 'package:fixit_app/features/onboarding&splash/presentation/widgets/onboarding_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import '../../../auth/presentation/screens/SignIn_screen.dart';
+import '../widgets/onboarding_widget.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});

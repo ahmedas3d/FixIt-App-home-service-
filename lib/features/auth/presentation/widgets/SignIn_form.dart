@@ -1,12 +1,12 @@
-import 'package:fixit_app/core/widgets/custom_button.dart';
-import 'package:fixit_app/features/auth/presentation/widgets/custom_password_from_field.dart';
-import 'package:fixit_app/features/auth/presentation/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
+import '../../../../core/widgets/custom_button.dart';
+import 'custom_password_from_field.dart';
+import 'custom_text_form_field.dart';
 
 class SignInForm extends StatelessWidget {
   SignInForm({super.key});
 
-  GlobalKey<FormState> formSignInKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> formSignInKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 

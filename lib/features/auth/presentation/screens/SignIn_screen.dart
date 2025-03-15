@@ -1,7 +1,9 @@
-import 'package:fixit_app/features/auth/presentation/widgets/SignIn_form.dart';
-import 'package:fixit_app/features/auth/presentation/widgets/social_button.dart';
+import 'package:fixit_app/core/widgets/translate_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../widgets/SignIn_form.dart';
+import '../widgets/social_button.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -14,12 +16,7 @@ class SignInScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         title: Image.asset('assets/images/logo.png', height: 40),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.language, color: Colors.black),
-            onPressed: () {},
-          ),
-        ],
+        actions: [TranslateButton()],
       ),
       body: SafeArea(
         child: Padding(
