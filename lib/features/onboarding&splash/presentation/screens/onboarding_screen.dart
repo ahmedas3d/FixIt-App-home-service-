@@ -1,3 +1,4 @@
+import 'package:fixit_app/features/auth/presentation/screens/SignIn_screen.dart';
 import 'package:fixit_app/features/onboarding&splash/presentation/widgets/onboarding_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -75,7 +76,25 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 right: 20,
                 child: TextButton(
                   onPressed: () {
-                    print("Skip pressed");
+                    Navigator.pushReplacement(
+                      context,
+                      PageRouteBuilder(
+                        pageBuilder:
+                            (context, animation, secondaryAnimation) =>
+                                SignInScreen(),
+                        transitionsBuilder: (
+                          context,
+                          animation,
+                          secondaryAnimation,
+                          child,
+                        ) {
+                          return FadeTransition(
+                            opacity: animation,
+                            child: child,
+                          );
+                        },
+                      ),
+                    );
                   },
                   child: Text(
                     "Skip",
@@ -112,7 +131,26 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         curve: Curves.easeIn,
                       );
                     } else {
-                      print("Get Started pressed");
+                      // Navigate to the next screen
+                      Navigator.pushReplacement(
+                        context,
+                        PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  SignInScreen(),
+                          transitionsBuilder: (
+                            context,
+                            animation,
+                            secondaryAnimation,
+                            child,
+                          ) {
+                            return FadeTransition(
+                              opacity: animation,
+                              child: child,
+                            );
+                          },
+                        ),
+                      );
                     }
                   },
                   style: ElevatedButton.styleFrom(

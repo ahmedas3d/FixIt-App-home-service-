@@ -6,8 +6,11 @@ void main() {
   {
     "folders": [],
     "files": {
-      "lib/features/onboarding&splash/presentation/screens/splash_screen.dart": "",
-      "lib/features/onboarding&splash/presentation/screens/onboarding_screen.dart": ""
+      "lib/features/auth/presentation/screens/SignIn_screen.dart": "",
+      "lib/features/auth/presentation/screens/SignUp_screen.dart": "",
+      "lib/features/auth/presentation/widgets/SignIn_form.dart": "",
+      "lib/features/auth/presentation/widgets/SignUp_form.dart": "",
+      "lib/features/auth/presentation/widgets/custom_text_form_field.dart": ""
     },
     "packages": []
   }
