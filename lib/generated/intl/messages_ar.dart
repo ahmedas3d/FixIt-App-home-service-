@@ -20,6 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
+  static String m0(email) =>
+      " يرجى التحقق من بريدك الإلكتروني والتحقق من حسابك : ${email}!";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
@@ -65,9 +68,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "signInNow": MessageLookupByLibrary.simpleMessage("تسجيل الدخول الآن"),
     "signUp": MessageLookupByLibrary.simpleMessage("سجل"),
     "signUpNow": MessageLookupByLibrary.simpleMessage("سجل حساب جديد"),
+    "signUpSuccess": MessageLookupByLibrary.simpleMessage("تم التسجيل بنجاح"),
     "skip": MessageLookupByLibrary.simpleMessage("تخطى"),
     "titleOn2": MessageLookupByLibrary.simpleMessage("العثور على الخدمات"),
     "titleOn3": MessageLookupByLibrary.simpleMessage("حجز الخدمات"),
+    "verificationEmailSent": MessageLookupByLibrary.simpleMessage(
+      "تم إرسال رسالة التحقق",
+    ),
+    "verifydescription": m0,
     "welcomeToFixit": MessageLookupByLibrary.simpleMessage(
       "مرحبًا بك في FixIt",
     ),

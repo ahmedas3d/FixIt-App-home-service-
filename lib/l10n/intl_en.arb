@@ -28,5 +28,8 @@
   "fullName": "Full Name",
   "enterYourFullName": "Enter your full name",
   "signUp": "Sign Up",
-  "iAgreeWithFixItsTermAndConditions": "I Agree With FixIt’s WeTrm & Conditions"
+  "iAgreeWithFixItsTermAndConditions": "I Agree With FixIt’s WeTrm & Conditions",
+  "signUpSuccess": "Sign Up Success",
+  "verificationEmailSent": "Verification Email Sent!",
+  "verifydescription": "Please check your email and verify your account to continue : {email}!"
 }

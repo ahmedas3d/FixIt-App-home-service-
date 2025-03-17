@@ -1,18 +1,33 @@
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:fixit_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import '../../../../core/widgets/custom_button.dart';
 import 'custom_password_from_field.dart';
 import 'custom_text_form_field.dart';
 
-class SignUpForm extends StatelessWidget {
-  SignUpForm({super.key});
+class SignUpForm extends StatefulWidget {
+  const SignUpForm({super.key});
 
+  @override
+  State<SignUpForm> createState() => _SignUpFormState();
+}
+
+class _SignUpFormState extends State<SignUpForm> {
+  final _supabaseAuth = Supabase.instance.client.auth;
   final GlobalKey<FormState> formSignUpKey = GlobalKey<FormState>();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   @override
+  void dispose() {
+    nameController.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
   Widget build(BuildContext context) {
     return Form(
       key: formSignUpKey,
@@ -63,8 +78,33 @@ class SignUpForm extends StatelessWidget {
             color: Color(0xff0054A5),
             textColor: Colors.white,
             title: S.of(context).signUp,
-            onTap: () {
-              if (formSignUpKey.currentState?.validate() ?? false) {}
+            onTap: () async {
+              if (formSignUpKey.currentState?.validate() ?? false) {
+                // Sign up the user
+                final res = await _supabaseAuth.signUp(
+                  email: emailController.text,
+                  password: passwordController.text,
+                );
+                if (res.user != null) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      elevation: 0,
+                      behavior: SnackBarBehavior.floating,
+                      backgroundColor: Colors.transparent,
+                      content: AwesomeSnackbarContent(
+                        title: S.of(context).verificationEmailSent,
+                        message: S
+                            .of(context)
+                            .verifydescription(emailController.text),
+                        contentType: ContentType.help,
+                      ),
+                    ),
+                  );
+                }
+                nameController.clear();
+                emailController.clear();
+                passwordController.clear();
+              }
             },
             size: 55,
             textSize: 18,

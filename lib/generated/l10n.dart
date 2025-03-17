@@ -259,6 +259,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Sign Up Success`
+  String get signUpSuccess {
+    return Intl.message(
+      'Sign Up Success',
+      name: 'signUpSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verification Email Sent!`
+  String get verificationEmailSent {
+    return Intl.message(
+      'Verification Email Sent!',
+      name: 'verificationEmailSent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please check your email and verify your account to continue : {email}!`
+  String verifydescription(Object email) {
+    return Intl.message(
+      'Please check your email and verify your account to continue : $email!',
+      name: 'verifydescription',
+      desc: '',
+      args: [email],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -28,5 +28,8 @@
   "fullName": "الاسم بالكامل",
   "enterYourFullName": "أدخل اسمك بالكامل",
   "signUp": "سجل",
-  "iAgreeWithFixItsTermAndConditions": "أوافق على شروط وأحكام FixIt"
+  "iAgreeWithFixItsTermAndConditions": "أوافق على شروط وأحكام FixIt",
+  "signUpSuccess": "تم التسجيل بنجاح",
+  "verificationEmailSent": "تم إرسال رسالة التحقق",
+  "verifydescription": " يرجى التحقق من بريدك الإلكتروني والتحقق من حسابك : {email}!"
 }
