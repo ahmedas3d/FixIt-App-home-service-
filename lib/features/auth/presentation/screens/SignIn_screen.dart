@@ -1,4 +1,6 @@
 import 'package:fixit_app/core/widgets/translate_button.dart';
+import 'package:fixit_app/features/auth/presentation/screens/SignUp_screen.dart';
+import 'package:fixit_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -24,8 +26,8 @@ class SignInScreen extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 20),
-              const Text(
-                'Enter your email and password to login',
+              Text(
+                S.of(context).enterYourEmailAndPasswordToLogin,
                 style: TextStyle(fontSize: 26),
               ),
               const SizedBox(height: 20),
@@ -35,11 +37,34 @@ class SignInScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text('New to fixIt?', style: TextStyle(fontSize: 18)),
+                  Text(
+                    S.of(context).newToFixIt,
+                    style: TextStyle(fontSize: 18),
+                  ),
                   TextButton(
-                    onPressed: () {},
-                    child: const Text(
-                      'Sign Up Now',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  SignUpScreen(),
+                          transitionsBuilder: (
+                            context,
+                            animation,
+                            secondaryAnimation,
+                            child,
+                          ) {
+                            return FadeTransition(
+                              opacity: animation,
+                              child: child,
+                            );
+                          },
+                        ),
+                      );
+                    },
+                    child: Text(
+                      S.of(context).signUpNow,
                       style: TextStyle(fontSize: 18, color: Color(0xff0054A5)),
                     ),
                   ),
@@ -55,7 +80,7 @@ class SignInScreen extends StatelessWidget {
                       endIndent: 10,
                     ),
                   ),
-                  Text("Or", style: TextStyle(color: Colors.black)),
+                  Text(S.of(context).or, style: TextStyle(color: Colors.black)),
                   Expanded(
                     child: Divider(
                       color: Colors.grey[400],
@@ -70,7 +95,7 @@ class SignInScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SocialButton(
-                    title: 'Facebook',
+                    title: S.of(context).facebook,
                     iconColor: Colors.blue,
                     color: Colors.transparent,
                     icon: FontAwesomeIcons.facebook,
@@ -79,7 +104,7 @@ class SignInScreen extends StatelessWidget {
                   ),
                   const SizedBox(width: 20),
                   SocialButton(
-                    title: 'Google',
+                    title: S.of(context).google,
                     iconColor: Colors.blue,
                     color: Colors.transparent,
                     icon: FontAwesomeIcons.google,

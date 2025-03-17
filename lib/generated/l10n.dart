@@ -64,6 +64,201 @@ class S {
   String get arabic {
     return Intl.message('Arabic', name: 'arabic', desc: '', args: []);
   }
+
+  /// `Welcome to FixIt`
+  String get welcomeToFixit {
+    return Intl.message(
+      'Welcome to FixIt',
+      name: 'welcomeToFixit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Discover a world of convenience and reliability. FIXit is your one stop solution for all your home service needs`
+  String get descriptionOn1 {
+    return Intl.message(
+      'Discover a world of convenience and reliability. FIXit is your one stop solution for all your home service needs',
+      name: 'descriptionOn1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Find Services`
+  String get titleOn2 {
+    return Intl.message('Find Services', name: 'titleOn2', desc: '', args: []);
+  }
+
+  /// `We provide a wide range of services to make your life easier. Our services include but are not limited to: cleaning, gardening, plumbing, electrical, appliance repair, and more.`
+  String get descriptionOn2 {
+    return Intl.message(
+      'We provide a wide range of services to make your life easier. Our services include but are not limited to: cleaning, gardening, plumbing, electrical, appliance repair, and more.',
+      name: 'descriptionOn2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Book Services`
+  String get titleOn3 {
+    return Intl.message('Book Services', name: 'titleOn3', desc: '', args: []);
+  }
+
+  /// `Browse and book a wide range of services from plumbing and electrical to appliance repair. We’ve got it all covered!`
+  String get descriptionOn3 {
+    return Intl.message(
+      'Browse and book a wide range of services from plumbing and electrical to appliance repair. We’ve got it all covered!',
+      name: 'descriptionOn3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Started`
+  String get getStarted {
+    return Intl.message('Get Started', name: 'getStarted', desc: '', args: []);
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message('Skip', name: 'skip', desc: '', args: []);
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message('Next', name: 'next', desc: '', args: []);
+  }
+
+  /// `Enter your email and password to login`
+  String get enterYourEmailAndPasswordToLogin {
+    return Intl.message(
+      'Enter your email and password to login',
+      name: 'enterYourEmailAndPasswordToLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New to fixIt?`
+  String get newToFixIt {
+    return Intl.message(
+      'New to fixIt?',
+      name: 'newToFixIt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up Now`
+  String get signUpNow {
+    return Intl.message('Sign Up Now', name: 'signUpNow', desc: '', args: []);
+  }
+
+  /// `Or`
+  String get or {
+    return Intl.message('Or', name: 'or', desc: '', args: []);
+  }
+
+  /// `Facebook`
+  String get facebook {
+    return Intl.message('Facebook', name: 'facebook', desc: '', args: []);
+  }
+
+  /// `Google`
+  String get google {
+    return Intl.message('Google', name: 'google', desc: '', args: []);
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message('Email', name: 'email', desc: '', args: []);
+  }
+
+  /// `Enter your email`
+  String get enterYourEmail {
+    return Intl.message(
+      'Enter your email',
+      name: 'enterYourEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message('Password', name: 'password', desc: '', args: []);
+  }
+
+  /// `Enter your password`
+  String get enterYourPassword {
+    return Intl.message(
+      'Enter your password',
+      name: 'enterYourPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot Password?`
+  String get forgotPassword {
+    return Intl.message(
+      'Forgot Password?',
+      name: 'forgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign In`
+  String get signIn {
+    return Intl.message('Sign In', name: 'signIn', desc: '', args: []);
+  }
+
+  /// `Already have an account?`
+  String get alreadyHaveAnAccount {
+    return Intl.message(
+      'Already have an account?',
+      name: 'alreadyHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign In Now`
+  String get signInNow {
+    return Intl.message('Sign In Now', name: 'signInNow', desc: '', args: []);
+  }
+
+  /// `Full Name`
+  String get fullName {
+    return Intl.message('Full Name', name: 'fullName', desc: '', args: []);
+  }
+
+  /// `Enter your full name`
+  String get enterYourFullName {
+    return Intl.message(
+      'Enter your full name',
+      name: 'enterYourFullName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up`
+  String get signUp {
+    return Intl.message('Sign Up', name: 'signUp', desc: '', args: []);
+  }
+
+  /// `I Agree With FixIt’s WeTrm & Conditions`
+  String get iAgreeWithFixItsTermAndConditions {
+    return Intl.message(
+      'I Agree With FixIt’s WeTrm & Conditions',
+      name: 'iAgreeWithFixItsTermAndConditions',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

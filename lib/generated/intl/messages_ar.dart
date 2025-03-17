@@ -22,7 +22,54 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
+      "لديك حساب بالفعل؟",
+    ),
     "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+    "descriptionOn1": MessageLookupByLibrary.simpleMessage(
+      "اكتشف عالمًا من الراحة والموثوقية. FIXit هو حلاً واحدًا لجميع احتياجات خدمات المنزل الخاصة بك",
+    ),
+    "descriptionOn2": MessageLookupByLibrary.simpleMessage(
+      "نحن نقدم مجموعة واسعة من الخدمات لتسهيل حياتك. تشمل خدماتنا ولكن لا تقتصر على: التنظيف والحدائق والسباكة والكهرباء وإصلاح الأجهزة وغيرها.",
+    ),
+    "descriptionOn3": MessageLookupByLibrary.simpleMessage(
+      "تصفح وحجز مجموعة كبيرة من الخدمات من السباكة والكهرباء إلى تصليح الأجهزة. نحن نغطي كل شيء!",
+    ),
+    "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
     "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
+    "enterYourEmail": MessageLookupByLibrary.simpleMessage(
+      "أدخل بريدك الإلكتروني",
+    ),
+    "enterYourEmailAndPasswordToLogin": MessageLookupByLibrary.simpleMessage(
+      "أدخل بريدك الإلكتروني وكلمة المرور لتسجيل الدخول",
+    ),
+    "enterYourFullName": MessageLookupByLibrary.simpleMessage(
+      "أدخل اسمك بالكامل",
+    ),
+    "enterYourPassword": MessageLookupByLibrary.simpleMessage(
+      "ادخل كلمة المرور",
+    ),
+    "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
+    "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+    "fullName": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
+    "getStarted": MessageLookupByLibrary.simpleMessage("ابدأ"),
+    "google": MessageLookupByLibrary.simpleMessage("جوجل"),
+    "iAgreeWithFixItsTermAndConditions": MessageLookupByLibrary.simpleMessage(
+      "أوافق على شروط وأحكام FixIt",
+    ),
+    "newToFixIt": MessageLookupByLibrary.simpleMessage("جديد في FixIt؟"),
+    "next": MessageLookupByLibrary.simpleMessage("التالي"),
+    "or": MessageLookupByLibrary.simpleMessage("أو"),
+    "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "signInNow": MessageLookupByLibrary.simpleMessage("تسجيل الدخول الآن"),
+    "signUp": MessageLookupByLibrary.simpleMessage("سجل"),
+    "signUpNow": MessageLookupByLibrary.simpleMessage("سجل حساب جديد"),
+    "skip": MessageLookupByLibrary.simpleMessage("تخطى"),
+    "titleOn2": MessageLookupByLibrary.simpleMessage("العثور على الخدمات"),
+    "titleOn3": MessageLookupByLibrary.simpleMessage("حجز الخدمات"),
+    "welcomeToFixit": MessageLookupByLibrary.simpleMessage(
+      "مرحبًا بك في FixIt",
+    ),
   };
 }

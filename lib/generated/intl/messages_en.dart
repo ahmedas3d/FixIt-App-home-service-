@@ -22,7 +22,50 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
+      "Already have an account?",
+    ),
     "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+    "descriptionOn1": MessageLookupByLibrary.simpleMessage(
+      "Discover a world of convenience and reliability. FIXit is your one stop solution for all your home service needs",
+    ),
+    "descriptionOn2": MessageLookupByLibrary.simpleMessage(
+      "We provide a wide range of services to make your life easier. Our services include but are not limited to: cleaning, gardening, plumbing, electrical, appliance repair, and more.",
+    ),
+    "descriptionOn3": MessageLookupByLibrary.simpleMessage(
+      "Browse and book a wide range of services from plumbing and electrical to appliance repair. We’ve got it all covered!",
+    ),
+    "email": MessageLookupByLibrary.simpleMessage("Email"),
     "english": MessageLookupByLibrary.simpleMessage("English"),
+    "enterYourEmail": MessageLookupByLibrary.simpleMessage("Enter your email"),
+    "enterYourEmailAndPasswordToLogin": MessageLookupByLibrary.simpleMessage(
+      "Enter your email and password to login",
+    ),
+    "enterYourFullName": MessageLookupByLibrary.simpleMessage(
+      "Enter your full name",
+    ),
+    "enterYourPassword": MessageLookupByLibrary.simpleMessage(
+      "Enter your password",
+    ),
+    "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+    "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+    "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
+    "google": MessageLookupByLibrary.simpleMessage("Google"),
+    "iAgreeWithFixItsTermAndConditions": MessageLookupByLibrary.simpleMessage(
+      "I Agree With FixIt’s WeTrm & Conditions",
+    ),
+    "newToFixIt": MessageLookupByLibrary.simpleMessage("New to fixIt?"),
+    "next": MessageLookupByLibrary.simpleMessage("Next"),
+    "or": MessageLookupByLibrary.simpleMessage("Or"),
+    "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
+    "signInNow": MessageLookupByLibrary.simpleMessage("Sign In Now"),
+    "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
+    "signUpNow": MessageLookupByLibrary.simpleMessage("Sign Up Now"),
+    "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "titleOn2": MessageLookupByLibrary.simpleMessage("Find Services"),
+    "titleOn3": MessageLookupByLibrary.simpleMessage("Book Services"),
+    "welcomeToFixit": MessageLookupByLibrary.simpleMessage("Welcome to FixIt"),
   };
 }

@@ -1,3 +1,4 @@
+import 'package:fixit_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -15,26 +16,29 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
 
-  final List<Map<String, String>> onboardingData = [
-    {
-      "image": "assets/images/onboarding1.png",
-      "title": "Welcome to FixIt",
-      "description":
-          "Discover a world of convenience and reliability. FIXit is your one stop solution for all your home service needs",
-    },
-    {
-      "image": "assets/images/onboarding2.png",
-      "title": "Find Services",
-      "description":
-          "Browse and book a wide range of services from plumbing and electrical to appliance repair. We’ve got it all covered",
-    },
-    {
-      "image": "assets/images/onboarding3.png",
-      "title": "Find Services",
-      "description":
-          "Browse and book a wide range of services from plumbing and electrical to appliance repair. We’ve got it all covered",
-    },
-  ];
+  late List<Map<String, String>> onboardingData;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    onboardingData = [
+      {
+        "image": "assets/images/onboarding1.png",
+        "title": S.of(context).welcomeToFixit,
+        "description": S.of(context).descriptionOn1,
+      },
+      {
+        "image": "assets/images/onboarding2.png",
+        "title": S.of(context).titleOn2,
+        "description": S.of(context).descriptionOn2,
+      },
+      {
+        "image": "assets/images/onboarding3.png",
+        "title": S.of(context).titleOn3,
+        "description": S.of(context).descriptionOn3,
+      },
+    ];
+  }
 
   @override
   void dispose() {
@@ -98,7 +102,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     );
                   },
                   child: Text(
-                    "Skip",
+                    S.of(context).skip,
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
@@ -166,8 +170,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                   child: Text(
                     _currentPage == onboardingData.length - 1
-                        ? "Get Started"
-                        : "Next",
+                        ? S.of(context).getStarted
+                        : S.of(context).next,
                     style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
                 ),

@@ -1,0 +1,76 @@
+import 'package:fixit_app/generated/l10n.dart';
+import 'package:flutter/material.dart';
+import '../../../../core/widgets/custom_button.dart';
+import 'custom_password_from_field.dart';
+import 'custom_text_form_field.dart';
+
+class SignUpForm extends StatelessWidget {
+  SignUpForm({super.key});
+
+  final GlobalKey<FormState> formSignUpKey = GlobalKey<FormState>();
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: formSignUpKey,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          CustomTextField(
+            controller: nameController,
+            label: S.of(context).fullName,
+            hint: S.of(context).enterYourFullName,
+            icon: Icons.person_outline,
+            keyboardType: TextInputType.name,
+          ),
+          const SizedBox(height: 15),
+          CustomTextField(
+            controller: emailController,
+            label: S.of(context).email,
+            hint: S.of(context).enterYourEmail,
+            icon: Icons.email_outlined,
+            keyboardType: TextInputType.emailAddress,
+          ),
+          const SizedBox(height: 15),
+          CustomPasswordField(
+            controller: passwordController,
+            label: S.of(context).password,
+            hint: S.of(context).enterYourPassword,
+          ),
+          const SizedBox(height: 5),
+          Row(
+            children: [
+              Checkbox(
+                value: true,
+                onChanged: (value) {},
+                activeColor: Color(0xff0054A5),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5),
+                ),
+              ),
+              Text(
+                S.of(context).iAgreeWithFixItsTermAndConditions,
+                style: TextStyle(color: Color(0xff000000), fontSize: 16),
+              ),
+            ],
+          ),
+          const SizedBox(height: 15),
+          customButton(
+            color: Color(0xff0054A5),
+            textColor: Colors.white,
+            title: S.of(context).signUp,
+            onTap: () {
+              if (formSignUpKey.currentState?.validate() ?? false) {}
+            },
+            size: 55,
+            textSize: 18,
+          ),
+        ],
+      ),
+    );
+  }
+}
