@@ -81,7 +81,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 right: 20,
                 child: TextButton(
                   onPressed: () {
-                    Navigator.pushReplacement(
+                    Navigator.pushAndRemoveUntil(
                       context,
                       PageRouteBuilder(
                         pageBuilder:
@@ -99,6 +99,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           );
                         },
                       ),
+                      (route) => false,
                     );
                   },
                   child: Text(
@@ -137,7 +138,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       );
                     } else {
                       // Navigate to the next screen
-                      Navigator.pushReplacement(
+                      Navigator.pushAndRemoveUntil(
                         context,
                         PageRouteBuilder(
                           pageBuilder:
@@ -155,6 +156,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             );
                           },
                         ),
+                        (route) => false,
                       );
                     }
                   },

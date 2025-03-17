@@ -52,6 +52,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "enterYourPassword": MessageLookupByLibrary.simpleMessage(
       "ادخل كلمة المرور",
     ),
+    "error": MessageLookupByLibrary.simpleMessage("خطأ"),
+    "errorDescription": MessageLookupByLibrary.simpleMessage(
+      "يرجى التحقق من بريدك الإلكتروني وكلمة المرور",
+    ),
     "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
     "fullName": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
@@ -76,6 +80,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم إرسال رسالة التحقق",
     ),
     "verifydescription": m0,
+    "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحبًا مجددًا"),
+    "welcomeMessage": MessageLookupByLibrary.simpleMessage(
+      "مرحبًا بك في FixIt، حلاً واحدًا لجميع احتياجات خدمات منزلك",
+    ),
     "welcomeToFixit": MessageLookupByLibrary.simpleMessage(
       "مرحبًا بك في FixIt",
     ),

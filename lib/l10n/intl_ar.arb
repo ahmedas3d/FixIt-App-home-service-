@@ -31,5 +31,9 @@
   "iAgreeWithFixItsTermAndConditions": "أوافق على شروط وأحكام FixIt",
   "signUpSuccess": "تم التسجيل بنجاح",
   "verificationEmailSent": "تم إرسال رسالة التحقق",
-  "verifydescription": " يرجى التحقق من بريدك الإلكتروني والتحقق من حسابك : {email}!"
+  "verifydescription": " يرجى التحقق من بريدك الإلكتروني والتحقق من حسابك : {email}!",
+  "welcomeBack": "مرحبًا مجددًا",
+  "welcomeMessage": "مرحبًا بك في FixIt، حلاً واحدًا لجميع احتياجات خدمات منزلك",
+  "error": "خطأ",
+  "errorDescription": "يرجى التحقق من بريدك الإلكتروني وكلمة المرور"
 }

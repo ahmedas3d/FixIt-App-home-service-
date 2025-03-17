@@ -50,6 +50,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "enterYourPassword": MessageLookupByLibrary.simpleMessage(
       "Enter your password",
     ),
+    "error": MessageLookupByLibrary.simpleMessage("Error"),
+    "errorDescription": MessageLookupByLibrary.simpleMessage(
+      "Please check your email and password",
+    ),
     "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
     "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
@@ -74,6 +78,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Verification Email Sent!",
     ),
     "verifydescription": m0,
+    "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back"),
+    "welcomeMessage": MessageLookupByLibrary.simpleMessage(
+      "Welcome to FixIt, your one-stop solution for all your home service needs",
+    ),
     "welcomeToFixit": MessageLookupByLibrary.simpleMessage("Welcome to FixIt"),
   };
 }

@@ -1,4 +1,5 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
+import 'package:fixit_app/features/auth/presentation/screens/SignIn_screen.dart';
 import 'package:fixit_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -104,6 +105,23 @@ class _SignUpFormState extends State<SignUpForm> {
                 nameController.clear();
                 emailController.clear();
                 passwordController.clear();
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  PageRouteBuilder(
+                    pageBuilder:
+                        (context, animation, secondaryAnimation) =>
+                            const SignInScreen(),
+                    transitionsBuilder: (
+                      context,
+                      animation,
+                      secondaryAnimation,
+                      child,
+                    ) {
+                      return FadeTransition(opacity: animation, child: child);
+                    },
+                  ),
+                  (route) => false,
+                );
               }
             },
             size: 55,

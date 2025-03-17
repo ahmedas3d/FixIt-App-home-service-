@@ -31,5 +31,9 @@
   "iAgreeWithFixItsTermAndConditions": "I Agree With FixIt’s WeTrm & Conditions",
   "signUpSuccess": "Sign Up Success",
   "verificationEmailSent": "Verification Email Sent!",
-  "verifydescription": "Please check your email and verify your account to continue : {email}!"
+  "verifydescription": "Please check your email and verify your account to continue : {email}!",
+  "welcomeBack": "Welcome Back",
+  "welcomeMessage": "Welcome to FixIt, your one-stop solution for all your home service needs",
+  "error": "Error",
+  "errorDescription": "Please check your email and password"
 }

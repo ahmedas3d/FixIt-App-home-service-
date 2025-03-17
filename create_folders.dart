@@ -4,13 +4,10 @@ import 'dart:io';
 void main() {
   const String jsonConfig = '''
   {
-    "folders": [],
+    "folders": [
+    ],
     "files": {
-      "lib/features/auth/presentation/screens/SignIn_screen.dart": "",
-      "lib/features/auth/presentation/screens/SignUp_screen.dart": "",
-      "lib/features/auth/presentation/widgets/SignIn_form.dart": "",
-      "lib/features/auth/presentation/widgets/SignUp_form.dart": "",
-      "lib/features/auth/presentation/widgets/custom_text_form_field.dart": ""
+      "lib/features/home/presentation/screens/home_page.dart": ""
     },
     "packages": []
   }

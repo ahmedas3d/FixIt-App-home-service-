@@ -27,7 +27,8 @@ class _FixitAppState extends State<FixitApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      locale: _locale,
+      // locale: _locale,
+      locale: const Locale('ar'),
       localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,

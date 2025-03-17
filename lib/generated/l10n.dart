@@ -289,6 +289,41 @@ class S {
       args: [email],
     );
   }
+
+  /// `Welcome Back`
+  String get welcomeBack {
+    return Intl.message(
+      'Welcome Back',
+      name: 'welcomeBack',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome to FixIt, your one-stop solution for all your home service needs`
+  String get welcomeMessage {
+    return Intl.message(
+      'Welcome to FixIt, your one-stop solution for all your home service needs',
+      name: 'welcomeMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error`
+  String get error {
+    return Intl.message('Error', name: 'error', desc: '', args: []);
+  }
+
+  /// `Please check your email and password`
+  String get errorDescription {
+    return Intl.message(
+      'Please check your email and password',
+      name: 'errorDescription',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
