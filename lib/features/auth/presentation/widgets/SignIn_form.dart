@@ -100,7 +100,6 @@ class _SignInFormState extends State<SignInForm> {
                     );
                   }
                 } catch (e) {
-                  // في حالة عدم صحة البيانات المدخلة في الفورم
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       elevation: 0,

@@ -38,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "descriptionOn3": MessageLookupByLibrary.simpleMessage(
       "تصفح وحجز مجموعة كبيرة من الخدمات من السباكة والكهرباء إلى تصليح الأجهزة. نحن نغطي كل شيء!",
     ),
+    "discord": MessageLookupByLibrary.simpleMessage("ديسكورد"),
     "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
     "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
     "enterYourEmail": MessageLookupByLibrary.simpleMessage(
@@ -64,6 +65,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "iAgreeWithFixItsTermAndConditions": MessageLookupByLibrary.simpleMessage(
       "أوافق على شروط وأحكام FixIt",
     ),
+    "loginFailed": MessageLookupByLibrary.simpleMessage("فشل تسجيل الدخول:"),
     "newToFixIt": MessageLookupByLibrary.simpleMessage("جديد في FixIt؟"),
     "next": MessageLookupByLibrary.simpleMessage("التالي"),
     "or": MessageLookupByLibrary.simpleMessage("أو"),
@@ -74,6 +76,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "signUpNow": MessageLookupByLibrary.simpleMessage("سجل حساب جديد"),
     "signUpSuccess": MessageLookupByLibrary.simpleMessage("تم التسجيل بنجاح"),
     "skip": MessageLookupByLibrary.simpleMessage("تخطى"),
+    "successSignUp": MessageLookupByLibrary.simpleMessage(
+      "تم تسجيل الدخول بنجاح!",
+    ),
     "titleOn2": MessageLookupByLibrary.simpleMessage("العثور على الخدمات"),
     "titleOn3": MessageLookupByLibrary.simpleMessage("حجز الخدمات"),
     "verificationEmailSent": MessageLookupByLibrary.simpleMessage(

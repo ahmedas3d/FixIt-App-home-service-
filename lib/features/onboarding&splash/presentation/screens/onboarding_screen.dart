@@ -1,3 +1,4 @@
+import 'package:fixit_app/core/utils/shared_preferenes/onboarding_service.dart';
 import 'package:fixit_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -79,50 +80,51 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               Positioned(
                 top: 20,
                 right: 20,
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.pushAndRemoveUntil(
-                      context,
-                      PageRouteBuilder(
-                        pageBuilder:
-                            (context, animation, secondaryAnimation) =>
-                                SignInScreen(),
-                        transitionsBuilder: (
-                          context,
-                          animation,
-                          secondaryAnimation,
-                          child,
-                        ) {
-                          return FadeTransition(
-                            opacity: animation,
-                            child: child,
-                          );
-                        },
+                left: 20,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Center(
+                      child: SmoothPageIndicator(
+                        controller: _pageController,
+                        count: onboardingData.length,
+                        effect: ExpandingDotsEffect(
+                          dotHeight: 8,
+                          dotWidth: 8,
+                          activeDotColor: Colors.white,
+                          dotColor: Colors.grey,
+                        ),
                       ),
-                      (route) => false,
-                    );
-                  },
-                  child: Text(
-                    S.of(context).skip,
-                    style: TextStyle(color: Colors.white, fontSize: 20),
-                  ),
-                ),
-              ),
-              Positioned(
-                bottom: MediaQuery.of(context).size.height * 0.15,
-                left: 0,
-                right: 0,
-                child: Center(
-                  child: SmoothPageIndicator(
-                    controller: _pageController,
-                    count: onboardingData.length,
-                    effect: ExpandingDotsEffect(
-                      dotHeight: 8,
-                      dotWidth: 8,
-                      activeDotColor: Colors.white,
-                      dotColor: Colors.grey,
                     ),
-                  ),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pushAndRemoveUntil(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder:
+                                (context, animation, secondaryAnimation) =>
+                                    SignInScreen(),
+                            transitionsBuilder: (
+                              context,
+                              animation,
+                              secondaryAnimation,
+                              child,
+                            ) {
+                              return FadeTransition(
+                                opacity: animation,
+                                child: child,
+                              );
+                            },
+                          ),
+                          (route) => false,
+                        );
+                      },
+                      child: Text(
+                        S.of(context).skip,
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Positioned(
@@ -130,7 +132,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 left: 20,
                 right: 20,
                 child: ElevatedButton(
-                  onPressed: () {
+                  onPressed: () async {
+                    await OnboardingService.completeOnboarding();
                     if (_currentPage < onboardingData.length - 1) {
                       _pageController.nextPage(
                         duration: Duration(milliseconds: 300),

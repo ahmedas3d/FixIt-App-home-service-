@@ -38,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "descriptionOn3": MessageLookupByLibrary.simpleMessage(
       "Browse and book a wide range of services from plumbing and electrical to appliance repair. We’ve got it all covered!",
     ),
+    "discord": MessageLookupByLibrary.simpleMessage("Discord"),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "english": MessageLookupByLibrary.simpleMessage("English"),
     "enterYourEmail": MessageLookupByLibrary.simpleMessage("Enter your email"),
@@ -62,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "iAgreeWithFixItsTermAndConditions": MessageLookupByLibrary.simpleMessage(
       "I Agree With FixIt’s WeTrm & Conditions",
     ),
+    "loginFailed": MessageLookupByLibrary.simpleMessage("Login Failed:"),
     "newToFixIt": MessageLookupByLibrary.simpleMessage("New to fixIt?"),
     "next": MessageLookupByLibrary.simpleMessage("Next"),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
@@ -72,6 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "signUpNow": MessageLookupByLibrary.simpleMessage("Sign Up Now"),
     "signUpSuccess": MessageLookupByLibrary.simpleMessage("Sign Up Success"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "successSignUp": MessageLookupByLibrary.simpleMessage("Sign Up Success!"),
     "titleOn2": MessageLookupByLibrary.simpleMessage("Find Services"),
     "titleOn3": MessageLookupByLibrary.simpleMessage("Book Services"),
     "verificationEmailSent": MessageLookupByLibrary.simpleMessage(

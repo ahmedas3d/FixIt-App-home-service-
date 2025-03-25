@@ -20,13 +20,12 @@ class SocialButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     return GestureDetector(
       onTap: onTap,
       child: Container(
         height: screenHeight * 0.05,
-        width: screenWidth * 1 / 2.5,
+        width: double.infinity,
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(15),

@@ -47,6 +47,7 @@ dependencies:
   intl_utils: ^2.8.10
   supabase_flutter: ^2.8.4
   awesome_snackbar_content: ^0.1.5
+  google_sign_in: ^6.3.0
 
 dev_dependencies:
   flutter_test:

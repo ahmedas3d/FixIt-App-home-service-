@@ -1,10 +1,13 @@
-import 'package:fixit_app/generated/l10n.dart';
+import 'package:fixit_app/features/auth/presentation/screens/SignIn_screen.dart';
+import 'package:fixit_app/features/onboarding&splash/presentation/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
-import 'features/onboarding&splash/presentation/screens/onboarding_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:fixit_app/generated/l10n.dart';
 
 class FixitApp extends StatefulWidget {
-  const FixitApp({super.key});
+  final bool showOnboarding;
+
+  const FixitApp({super.key, required this.showOnboarding});
 
   @override
   State<FixitApp> createState() => _FixitAppState();
@@ -18,7 +21,7 @@ class FixitApp extends StatefulWidget {
 class _FixitAppState extends State<FixitApp> {
   Locale? _locale;
 
-  setLocale(Locale locale) {
+  void setLocale(Locale locale) {
     setState(() {
       _locale = locale;
     });
@@ -27,8 +30,7 @@ class _FixitAppState extends State<FixitApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // locale: _locale,
-      locale: const Locale('ar'),
+      locale: _locale,
       localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -38,7 +40,10 @@ class _FixitAppState extends State<FixitApp> {
       supportedLocales: S.delegate.supportedLocales,
       theme: ThemeData(fontFamily: 'Almarai'),
       debugShowCheckedModeBanner: false,
-      home: OnboardingScreen(),
+      home:
+          widget.showOnboarding
+              ? const OnboardingScreen()
+              : const SignInScreen(),
     );
   }
 }

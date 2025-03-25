@@ -1,5 +1,8 @@
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:fixit_app/core/widgets/translate_button.dart';
+import 'package:fixit_app/features/auth/data/repositories/auth_service.dart';
 import 'package:fixit_app/features/auth/presentation/screens/SignUp_screen.dart';
+import 'package:fixit_app/features/home/presentation/screens/home_page.dart';
 import 'package:fixit_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -91,27 +94,66 @@ class SignInScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SocialButton(
-                    title: S.of(context).facebook,
-                    iconColor: Colors.blue,
-                    color: Colors.transparent,
-                    icon: FontAwesomeIcons.facebook,
-                    borderColor: Colors.grey,
-                    onTap: () {},
-                  ),
-                  const SizedBox(width: 20),
-                  SocialButton(
-                    title: S.of(context).google,
-                    iconColor: Colors.blue,
-                    color: Colors.transparent,
-                    icon: FontAwesomeIcons.google,
-                    borderColor: Colors.grey,
-                    onTap: () {},
-                  ),
-                ],
+              SocialButton(
+                title: S.of(context).google,
+                iconColor: Colors.blue,
+                color: Colors.transparent,
+                icon: FontAwesomeIcons.google,
+                borderColor: Colors.grey,
+                onTap: () async {
+                  try {
+                    final res = await AuthService.googleSignIn();
+                    if (res.user != null) {
+                      Navigator.pushAndRemoveUntil(
+                        context,
+                        PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  HomeScreen(),
+                          transitionsBuilder: (
+                            context,
+                            animation,
+                            secondaryAnimation,
+                            child,
+                          ) {
+                            return FadeTransition(
+                              opacity: animation,
+                              child: child,
+                            );
+                          },
+                        ),
+                        (route) => false,
+                      );
+                      // نجاح تسجيل الدخول
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          elevation: 0,
+                          behavior: SnackBarBehavior.floating,
+                          backgroundColor: Colors.transparent,
+                          content: AwesomeSnackbarContent(
+                            title: S.of(context).welcomeBack,
+                            message: S.of(context).welcomeMessage,
+                            contentType: ContentType.success,
+                          ),
+                        ),
+                      );
+                    }
+                  } catch (e) {
+                    // التعامل مع الأخطاء
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        elevation: 0,
+                        behavior: SnackBarBehavior.floating,
+                        backgroundColor: Colors.transparent,
+                        content: AwesomeSnackbarContent(
+                          title: S.of(context).error,
+                          message: e.toString(),
+                          contentType: ContentType.failure,
+                        ),
+                      ),
+                    );
+                  }
+                },
               ),
             ],
           ),

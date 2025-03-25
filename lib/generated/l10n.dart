@@ -324,6 +324,31 @@ class S {
       args: [],
     );
   }
+
+  /// `Discord`
+  String get discord {
+    return Intl.message('Discord', name: 'discord', desc: '', args: []);
+  }
+
+  /// `Sign Up Success!`
+  String get successSignUp {
+    return Intl.message(
+      'Sign Up Success!',
+      name: 'successSignUp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login Failed:`
+  String get loginFailed {
+    return Intl.message(
+      'Login Failed:',
+      name: 'loginFailed',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

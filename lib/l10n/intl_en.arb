@@ -35,5 +35,8 @@
   "welcomeBack": "Welcome Back",
   "welcomeMessage": "Welcome to FixIt, your one-stop solution for all your home service needs",
   "error": "Error",
-  "errorDescription": "Please check your email and password"
+  "errorDescription": "Please check your email and password",
+  "discord": "Discord",
+  "successSignUp": "Sign Up Success!",
+  "loginFailed": "Login Failed:"
 }
