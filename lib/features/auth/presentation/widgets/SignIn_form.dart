@@ -115,7 +115,7 @@ class _SignInFormState extends State<SignInForm> {
                 }
               }
             },
-            size: 55,
+            size: 60,
             textSize: 18,
           ),
         ],

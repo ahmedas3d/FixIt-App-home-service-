@@ -1,7 +1,8 @@
-import 'package:fixit_app/app.dart';
+import 'package:fixit_app/core/utils/service/language_cubit/language_cubit.dart';
 import 'package:fixit_app/core/widgets/custom_button.dart';
 import 'package:fixit_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class TranslateButton extends StatelessWidget {
   const TranslateButton({super.key});
@@ -26,22 +27,26 @@ class TranslateButton extends StatelessWidget {
                   customButton(
                     title: S.of(context).english,
                     onTap: () {
-                      FixitApp.setLocale(context, const Locale('en'));
+                      context.read<LanguageCubit>().changeLanguage(
+                        const Locale('en'),
+                      );
                       Navigator.pop(context);
                     },
-                    color: Color(0xff0054A5),
+                    color: const Color(0xff0054A5),
                     textColor: Colors.white,
                   ),
                   const SizedBox(height: 10),
                   customButton(
                     title: S.of(context).arabic,
                     onTap: () {
-                      FixitApp.setLocale(context, const Locale('ar'));
+                      context.read<LanguageCubit>().changeLanguage(
+                        const Locale('ar'),
+                      );
                       Navigator.pop(context);
                     },
                     color: Colors.white,
-                    textColor: Color(0xff0054A5),
-                    borderColor: Color(0xff0054A5),
+                    textColor: const Color(0xff0054A5),
+                    borderColor: const Color(0xff0054A5),
                   ),
                 ],
               ),

@@ -1,5 +1,5 @@
-import 'package:fixit_app/core/utils/shared_preferenes/onboarding_service.dart';
-import 'package:fixit_app/core/utils/supabase_setup.dart';
+import 'package:fixit_app/core/utils/service/shared_preferenes/onboarding_service.dart';
+import 'package:fixit_app/core/utils/service/supabase_setup.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'app.dart';

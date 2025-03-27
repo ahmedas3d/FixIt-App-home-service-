@@ -1,4 +1,4 @@
-import 'package:fixit_app/core/utils/shared_preferenes/onboarding_service.dart';
+import 'package:fixit_app/core/utils/service/shared_preferenes/onboarding_service.dart';
 import 'package:fixit_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';

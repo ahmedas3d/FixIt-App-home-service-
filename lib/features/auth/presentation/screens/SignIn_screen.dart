@@ -1,10 +1,12 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
+import 'package:fixit_app/core/utils/service/auth_cubit/auth_cubit.dart';
 import 'package:fixit_app/core/widgets/translate_button.dart';
 import 'package:fixit_app/features/auth/data/repositories/auth_service.dart';
 import 'package:fixit_app/features/auth/presentation/screens/SignUp_screen.dart';
 import 'package:fixit_app/features/home/presentation/screens/home_page.dart';
 import 'package:fixit_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../widgets/SignIn_form.dart';
@@ -124,6 +126,8 @@ class SignInScreen extends StatelessWidget {
                         ),
                         (route) => false,
                       );
+                      // نجاح تسجيل الدخول
+                      context.read<AuthCubit>().login();
                       // نجاح تسجيل الدخول
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
