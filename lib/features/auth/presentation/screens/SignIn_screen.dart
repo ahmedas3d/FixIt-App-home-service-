@@ -106,12 +106,16 @@ class SignInScreen extends StatelessWidget {
                   try {
                     final res = await AuthService.googleSignIn();
                     if (res.user != null) {
+                      // تحديث حالة المصادقة إلى "مستخدم مسجّل دخول"
+                      context.read<AuthCubit>().login();
+
+                      // التنقل إلى الصفحة الرئيسية بعد تسجيل الدخول
                       Navigator.pushAndRemoveUntil(
                         context,
                         PageRouteBuilder(
                           pageBuilder:
                               (context, animation, secondaryAnimation) =>
-                                  HomeScreen(),
+                                  const HomeScreen(),
                           transitionsBuilder: (
                             context,
                             animation,
@@ -126,9 +130,8 @@ class SignInScreen extends StatelessWidget {
                         ),
                         (route) => false,
                       );
-                      // نجاح تسجيل الدخول
-                      context.read<AuthCubit>().login();
-                      // نجاح تسجيل الدخول
+
+                      // عرض رسالة نجاح
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           elevation: 0,
@@ -143,7 +146,7 @@ class SignInScreen extends StatelessWidget {
                       );
                     }
                   } catch (e) {
-                    // التعامل مع الأخطاء
+                    // عرض رسالة خطأ في حال فشل تسجيل الدخول
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         elevation: 0,

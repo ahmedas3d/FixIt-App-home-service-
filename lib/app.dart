@@ -11,14 +11,19 @@ import 'package:fixit_app/generated/l10n.dart';
 
 class FixitApp extends StatelessWidget {
   final bool showOnboarding;
+  final bool isLoggedIn;
 
-  const FixitApp({super.key, required this.showOnboarding});
+  const FixitApp({
+    super.key,
+    required this.showOnboarding,
+    required this.isLoggedIn,
+  });
 
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => AuthCubit()),
+        BlocProvider(create: (context) => AuthCubit(isLoggedIn)),
         BlocProvider(create: (context) => LanguageCubit()),
       ],
       child: BlocBuilder<LanguageCubit, LanguageState>(
