@@ -1,4 +1,4 @@
-import 'package:fixit_app/core/utils/service/language_cubit/language_cubit.dart';
+import 'package:fixit_app/core/services/language_cubit/language_cubit.dart';
 import 'package:fixit_app/core/widgets/custom_button.dart';
 import 'package:fixit_app/generated/l10n.dart';
 import 'package:flutter/material.dart';

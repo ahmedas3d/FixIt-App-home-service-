@@ -1,9 +1,9 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
-import 'package:fixit_app/core/utils/service/auth_cubit/auth_cubit.dart';
+import 'package:fixit_app/core/services/auth_cubit/auth_cubit.dart';
+import 'package:fixit_app/core/widgets/BottomNavBar/main_bottom_bar.dart';
 import 'package:fixit_app/core/widgets/translate_button.dart';
 import 'package:fixit_app/features/auth/data/repositories/auth_service.dart';
 import 'package:fixit_app/features/auth/presentation/screens/SignUp_screen.dart';
-import 'package:fixit_app/features/home/presentation/screens/home_page.dart';
 import 'package:fixit_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -115,7 +115,7 @@ class SignInScreen extends StatelessWidget {
                         PageRouteBuilder(
                           pageBuilder:
                               (context, animation, secondaryAnimation) =>
-                                  const HomeScreen(),
+                                  const MainScreen(),
                           transitionsBuilder: (
                             context,
                             animation,

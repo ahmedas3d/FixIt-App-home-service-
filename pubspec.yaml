@@ -48,6 +48,7 @@ dependencies:
   supabase_flutter: ^2.8.4
   awesome_snackbar_content: ^0.1.5
   google_sign_in: ^6.3.0
+  rive: ^0.13.20
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +74,7 @@ flutter:
   assets:
     - assets/images/
     - assets/fonts/
+    - assets/animated-icons.riv
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

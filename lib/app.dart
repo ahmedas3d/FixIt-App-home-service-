@@ -1,7 +1,7 @@
-import 'package:fixit_app/core/utils/service/auth_cubit/auth_cubit.dart';
-import 'package:fixit_app/core/utils/service/auth_cubit/auth_state.dart';
-import 'package:fixit_app/core/utils/service/language_cubit/language_cubit.dart';
-import 'package:fixit_app/features/home/presentation/screens/home_page.dart';
+import 'package:fixit_app/core/services/auth_cubit/auth_cubit.dart';
+import 'package:fixit_app/core/services/auth_cubit/auth_state.dart';
+import 'package:fixit_app/core/services/language_cubit/language_cubit.dart';
+import 'package:fixit_app/core/widgets/BottomNavBar/main_bottom_bar.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fixit_app/features/auth/presentation/screens/SignIn_screen.dart';
 import 'package:fixit_app/features/onboarding&splash/presentation/screens/onboarding_screen.dart';
@@ -52,7 +52,7 @@ class FixitApp extends StatelessWidget {
                 debugShowCheckedModeBanner: false,
                 home:
                     authState is AuthLoggedIn
-                        ? const HomeScreen()
+                        ? const MainScreen()
                         : (showOnboarding
                             ? const OnboardingScreen()
                             : const SignInScreen()),

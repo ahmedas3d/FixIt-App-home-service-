@@ -1,5 +1,4 @@
-import 'package:fixit_app/core/utils/service/auth_cubit/auth_state.dart'
-    as local;
+import 'package:fixit_app/core/services/auth_cubit/auth_state.dart' as local;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
