@@ -68,6 +68,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "next": MessageLookupByLibrary.simpleMessage("Next"),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "popularServices": MessageLookupByLibrary.simpleMessage("Popular Services"),
+    "serviceProviders": MessageLookupByLibrary.simpleMessage(
+      "Service Providers",
+    ),
     "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
     "signInNow": MessageLookupByLibrary.simpleMessage("Sign In Now"),
     "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
@@ -81,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Verification Email Sent!",
     ),
     "verifydescription": m0,
+    "viewAll": MessageLookupByLibrary.simpleMessage("View All"),
     "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back"),
     "welcomeMessage": MessageLookupByLibrary.simpleMessage(
       "Welcome to FixIt, your one-stop solution for all your home service needs",

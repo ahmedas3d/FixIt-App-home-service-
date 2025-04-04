@@ -29,8 +29,8 @@ class _AnimatedIconItemsState extends State<AnimatedIconItems> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 38,
-      height: 38,
+      width: 35,
+      height: 35,
       child: RiveAnimation.asset(
         widget.riveModel.src,
         artboard: widget.riveModel.artboard,
@@ -41,7 +41,6 @@ class _AnimatedIconItemsState extends State<AnimatedIconItems> {
               artboard,
               widget.riveModel.stateMachineName,
             );
-
             if (_controller != null) {
               artboard.addController(_controller!);
               final activeInput = _controller!.findInput<bool>('active');

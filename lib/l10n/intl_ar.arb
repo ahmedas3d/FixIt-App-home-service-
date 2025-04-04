@@ -38,5 +38,8 @@
   "errorDescription": "يرجى التحقق من بريدك الإلكتروني وكلمة المرور",
   "discord": "ديسكورد",
   "successSignUp": "تم تسجيل الدخول بنجاح!",
-  "loginFailed": "فشل تسجيل الدخول:"
+  "loginFailed": "فشل تسجيل الدخول:",
+  "popularServices": "الخدمات الشائعة",
+  "viewAll": "عرض الكل",
+  "serviceProviders": "مقدمو الخدمة"
 }

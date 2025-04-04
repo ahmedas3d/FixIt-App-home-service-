@@ -38,5 +38,8 @@
   "errorDescription": "Please check your email and password",
   "discord": "Discord",
   "successSignUp": "Sign Up Success!",
-  "loginFailed": "Login Failed:"
+  "loginFailed": "Login Failed:",
+  "popularServices": "Popular Services",
+  "viewAll": "View All",
+  "serviceProviders": "Service Providers"
 }

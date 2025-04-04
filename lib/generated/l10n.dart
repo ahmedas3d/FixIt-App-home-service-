@@ -349,6 +349,31 @@ class S {
       args: [],
     );
   }
+
+  /// `Popular Services`
+  String get popularServices {
+    return Intl.message(
+      'Popular Services',
+      name: 'popularServices',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View All`
+  String get viewAll {
+    return Intl.message('View All', name: 'viewAll', desc: '', args: []);
+  }
+
+  /// `Service Providers`
+  String get serviceProviders {
+    return Intl.message(
+      'Service Providers',
+      name: 'serviceProviders',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

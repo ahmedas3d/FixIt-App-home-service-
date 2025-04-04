@@ -70,6 +70,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "next": MessageLookupByLibrary.simpleMessage("التالي"),
     "or": MessageLookupByLibrary.simpleMessage("أو"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "popularServices": MessageLookupByLibrary.simpleMessage("الخدمات الشائعة"),
+    "serviceProviders": MessageLookupByLibrary.simpleMessage("مقدمو الخدمة"),
     "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "signInNow": MessageLookupByLibrary.simpleMessage("تسجيل الدخول الآن"),
     "signUp": MessageLookupByLibrary.simpleMessage("سجل"),
@@ -85,6 +87,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم إرسال رسالة التحقق",
     ),
     "verifydescription": m0,
+    "viewAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
     "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحبًا مجددًا"),
     "welcomeMessage": MessageLookupByLibrary.simpleMessage(
       "مرحبًا بك في FixIt، حلاً واحدًا لجميع احتياجات خدمات منزلك",

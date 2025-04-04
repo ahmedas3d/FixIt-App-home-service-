@@ -15,7 +15,7 @@ class CustomBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(18),
       child: Container(
         height: 65,
         decoration: BoxDecoration(
@@ -38,8 +38,8 @@ class CustomBottomNavBar extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    height: 8,
-                    width: 20,
+                    height: 5,
+                    width: 5,
                     decoration: BoxDecoration(
                       color:
                           selectedIndex == index
@@ -51,6 +51,17 @@ class CustomBottomNavBar extends StatelessWidget {
                   AnimatedIconItems(
                     riveModel: bottomNavItems[index],
                     isActive: selectedIndex == index,
+                  ),
+                  Text(
+                    bottomNavItems[index].title, // اسم العنصر
+                    style: TextStyle(
+                      color:
+                          selectedIndex == index
+                              ? Colors.white
+                              : Colors.white70,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ],
               ),
