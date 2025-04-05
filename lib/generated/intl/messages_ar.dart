@@ -38,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "descriptionOn3": MessageLookupByLibrary.simpleMessage(
       "تصفح وحجز مجموعة كبيرة من الخدمات من السباكة والكهرباء إلى تصليح الأجهزة. نحن نغطي كل شيء!",
     ),
+    "details": MessageLookupByLibrary.simpleMessage("التفاصيل"),
     "discord": MessageLookupByLibrary.simpleMessage("ديسكورد"),
     "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
     "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
@@ -68,6 +69,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "loginFailed": MessageLookupByLibrary.simpleMessage("فشل تسجيل الدخول:"),
     "newToFixIt": MessageLookupByLibrary.simpleMessage("جديد في FixIt؟"),
     "next": MessageLookupByLibrary.simpleMessage("التالي"),
+    "noProvidersAvailable": MessageLookupByLibrary.simpleMessage(
+      "لا توجد مزودين متاحين. يرجى المحاولة مرة أخرى لاحقًا.",
+    ),
     "or": MessageLookupByLibrary.simpleMessage("أو"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "popularServices": MessageLookupByLibrary.simpleMessage("الخدمات الشائعة"),

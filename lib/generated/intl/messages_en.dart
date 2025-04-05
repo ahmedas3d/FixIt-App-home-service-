@@ -38,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "descriptionOn3": MessageLookupByLibrary.simpleMessage(
       "Browse and book a wide range of services from plumbing and electrical to appliance repair. We’ve got it all covered!",
     ),
+    "details": MessageLookupByLibrary.simpleMessage("Details"),
     "discord": MessageLookupByLibrary.simpleMessage("Discord"),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "english": MessageLookupByLibrary.simpleMessage("English"),
@@ -66,6 +67,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "loginFailed": MessageLookupByLibrary.simpleMessage("Login Failed:"),
     "newToFixIt": MessageLookupByLibrary.simpleMessage("New to fixIt?"),
     "next": MessageLookupByLibrary.simpleMessage("Next"),
+    "noProvidersAvailable": MessageLookupByLibrary.simpleMessage(
+      "No providers available. Please try again later.",
+    ),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "popularServices": MessageLookupByLibrary.simpleMessage("Popular Services"),

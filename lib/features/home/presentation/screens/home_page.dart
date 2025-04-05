@@ -1,6 +1,12 @@
+import 'package:fixit_app/core/constants/constants.dart';
+import 'package:fixit_app/features/home/data/home_cubit/home_cubit.dart';
+import 'package:fixit_app/features/home/data/repositories/service_provider_repository.dart';
+import 'package:fixit_app/features/home/presentation/widgets/service_providers_section.dart';
 import 'package:fixit_app/features/home/presentation/widgets/title_section.dart';
 import 'package:fixit_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,7 +14,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
         title: SizedBox(
           height: 40,
           width: 40,
@@ -25,7 +34,6 @@ class HomeScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          spacing: 15,
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18),
@@ -51,6 +59,54 @@ class HomeScreen extends StatelessWidget {
                 // Handle view all button press
               },
             ),
+            BlocProvider(
+              create:
+                  (context) => HomeCubit(
+                    RepositoryProvider.of<ServiceProviderRepository>(context),
+                  )..getHomeData(),
+              child: BlocBuilder<HomeCubit, HomeState>(
+                builder: (context, state) {
+                  if (state is HomeLoading) {
+                    return Center(
+                      child: SpinKitFadingCube(
+                        color: AppColor.kPrimaryColor,
+                        size: 20.0,
+                      ),
+                    );
+                  } else if (state is HomeLoaded) {
+                    if (state.providers.isEmpty) {
+                      return Center(
+                        child: Text(S.current.noProvidersAvailable),
+                      );
+                    }
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: GridView.builder(
+                        itemCount: 4,
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              childAspectRatio: 0.85,
+                              crossAxisSpacing: 8,
+                              mainAxisSpacing: 8,
+                            ),
+                        itemBuilder: (context, index) {
+                          return ServiceProvidersSection(
+                            provider: state.providers[index],
+                          );
+                        },
+                      ),
+                    );
+                  } else if (state is HomeError) {
+                    return Center(child: Text(state.errorMessage));
+                  }
+                  return const SizedBox.shrink();
+                },
+              ),
+            ),
+            const SizedBox(height: 10),
           ],
         ),
       ),

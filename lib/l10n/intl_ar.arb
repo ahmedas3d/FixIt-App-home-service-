@@ -41,5 +41,7 @@
   "loginFailed": "فشل تسجيل الدخول:",
   "popularServices": "الخدمات الشائعة",
   "viewAll": "عرض الكل",
-  "serviceProviders": "مقدمو الخدمة"
+  "serviceProviders": "مقدمو الخدمة",
+  "noProvidersAvailable": "لا توجد مزودين متاحين. يرجى المحاولة مرة أخرى لاحقًا.",
+  "details": "التفاصيل"
 }

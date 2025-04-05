@@ -374,6 +374,21 @@ class S {
       args: [],
     );
   }
+
+  /// `No providers available. Please try again later.`
+  String get noProvidersAvailable {
+    return Intl.message(
+      'No providers available. Please try again later.',
+      name: 'noProvidersAvailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Details`
+  String get details {
+    return Intl.message('Details', name: 'details', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -41,5 +41,7 @@
   "loginFailed": "Login Failed:",
   "popularServices": "Popular Services",
   "viewAll": "View All",
-  "serviceProviders": "Service Providers"
+  "serviceProviders": "Service Providers",
+  "noProvidersAvailable": "No providers available. Please try again later.",
+  "details": "Details"
 }
