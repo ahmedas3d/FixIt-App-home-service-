@@ -1,6 +1,7 @@
 import 'package:fixit_app/core/constants/constants.dart';
 import 'package:fixit_app/features/home/data/home_cubit/home_cubit.dart';
 import 'package:fixit_app/features/home/data/repositories/service_provider_repository.dart';
+import 'package:fixit_app/features/home/presentation/widgets/popular_services_section.dart';
 import 'package:fixit_app/features/home/presentation/widgets/service_providers_section.dart';
 import 'package:fixit_app/features/home/presentation/widgets/title_section.dart';
 import 'package:fixit_app/generated/l10n.dart';
@@ -13,6 +14,14 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+    final crossAxisCount = 2;
+    final crossAxisSpacing = 8;
+    final totalHorizontalSpacing = (crossAxisCount - 1) * crossAxisSpacing;
+    final itemWidth = (screenWidth - totalHorizontalSpacing) / crossAxisCount;
+    final desiredItemHeight = screenHeight * 0.28;
+    final childAspectRatio = itemWidth / desiredItemHeight;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -51,7 +60,10 @@ class HomeScreen extends StatelessWidget {
                 // Handle view all button press
               },
             ),
-            SizedBox(height: 80),
+            SizedBox(
+              height: screenHeight * 0.14,
+              child: PopularServicesSection(),
+            ),
             TitleSection(
               title: S.of(context).serviceProviders,
               subtitle: S.of(context).viewAll,
@@ -67,10 +79,13 @@ class HomeScreen extends StatelessWidget {
               child: BlocBuilder<HomeCubit, HomeState>(
                 builder: (context, state) {
                   if (state is HomeLoading) {
-                    return Center(
-                      child: SpinKitFadingCube(
-                        color: AppColor.kPrimaryColor,
-                        size: 20.0,
+                    return SizedBox(
+                      height: screenHeight * 0.30,
+                      child: Center(
+                        child: SpinKitFadingCube(
+                          color: AppColor.kPrimaryColor,
+                          size: 20.0,
+                        ),
                       ),
                     );
                   } else if (state is HomeLoaded) {
@@ -85,13 +100,12 @@ class HomeScreen extends StatelessWidget {
                         itemCount: 4,
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2,
-                              childAspectRatio: 0.85,
-                              crossAxisSpacing: 8,
-                              mainAxisSpacing: 8,
-                            ),
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: crossAxisCount,
+                          childAspectRatio: childAspectRatio,
+                          crossAxisSpacing: 8,
+                          mainAxisSpacing: 8,
+                        ),
                         itemBuilder: (context, index) {
                           return ServiceProvidersSection(
                             provider: state.providers[index],

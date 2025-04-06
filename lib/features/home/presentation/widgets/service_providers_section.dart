@@ -17,14 +17,7 @@ class ServiceProvidersSection extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 2,
-            blurRadius: 5,
-            offset: const Offset(0, 3),
-          ),
-        ],
+        border: Border.all(color: Colors.grey[300]!, width: 1.5),
       ),
 
       child: Padding(
@@ -56,7 +49,7 @@ class ServiceProvidersSection extends StatelessWidget {
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
-            const SizedBox(height: 8),
+            const Spacer(flex: 2),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -80,6 +73,7 @@ class ServiceProvidersSection extends StatelessWidget {
                 ),
               ],
             ),
+            const Spacer(flex: 1),
           ],
         ),
       ),
