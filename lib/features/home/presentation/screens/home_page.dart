@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
     final crossAxisSpacing = 8;
     final totalHorizontalSpacing = (crossAxisCount - 1) * crossAxisSpacing;
     final itemWidth = (screenWidth - totalHorizontalSpacing) / crossAxisCount;
-    final desiredItemHeight = screenHeight * 0.28;
+    final desiredItemHeight = screenHeight * 0.30;
     final childAspectRatio = itemWidth / desiredItemHeight;
     return Scaffold(
       backgroundColor: Colors.white,
@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
               },
             ),
             SizedBox(
-              height: screenHeight * 0.14,
+              height: screenHeight * 0.13,
               child: PopularServicesSection(),
             ),
             TitleSection(
@@ -109,6 +109,12 @@ class HomeScreen extends StatelessWidget {
                         itemBuilder: (context, index) {
                           return ServiceProvidersSection(
                             provider: state.providers[index],
+                            onTap: () {
+                              // مثلًا تروح لصفحة تفاصيل المزود ده
+                              // Navigator.push(context, MaterialPageRoute(
+                              //   builder: (_) => ProviderDetailsPage(provider: providers[index]),
+                              // ));
+                            },
                           );
                         },
                       ),

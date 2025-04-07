@@ -7,8 +7,13 @@ import 'package:fixit_app/Models/service_provider_model.dart';
 
 class ServiceProvidersSection extends StatelessWidget {
   final ServiceProvider provider;
+  final VoidCallback onTap; // <-- أضف دي
 
-  const ServiceProvidersSection({super.key, required this.provider});
+  const ServiceProvidersSection({
+    super.key,
+    required this.provider,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +24,6 @@ class ServiceProvidersSection extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
         border: Border.all(color: Colors.grey[300]!, width: 1.5),
       ),
-
       child: Padding(
         padding: const EdgeInsets.all(8),
         child: Column(
@@ -33,7 +37,7 @@ class ServiceProvidersSection extends StatelessWidget {
               errorWidget: (context, url, error) => const Icon(Icons.error),
               fit: BoxFit.cover,
               width: double.infinity,
-              height: 130,
+              height: 150,
             ),
             const SizedBox(height: 8),
             Text(
@@ -65,11 +69,12 @@ class ServiceProvidersSection extends StatelessWidget {
                 ),
                 CustomButtonHome(
                   title: S.of(context).details,
-                  onTap: () {},
+                  onTap: onTap, // <-- استخدم الكول باك هنا
                   color: AppColor.kPrimaryColor,
                   textColor: Colors.white,
+                  textSize: 14,
                   size: 30,
-                  withSize: 100,
+                  withSize: 75,
                 ),
               ],
             ),
