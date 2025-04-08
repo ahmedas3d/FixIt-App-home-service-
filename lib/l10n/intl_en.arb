@@ -43,5 +43,14 @@
   "viewAll": "View All",
   "serviceProviders": "Service Providers",
   "noProvidersAvailable": "No providers available. Please try again later.",
-  "details": "Details"
+  "details": "Details",
+  "plumbing": "Plumbing",
+  "maintenance": "Maintenance",
+  "cleaning": "Cleaning",
+  "homeImprovement": "Home Improvement",
+  "security": "Security",
+  "carMaintenance": "Car Maintenance",
+  "handymanServices": "Handyman Services",
+  "paintingServices": "Painting Services",
+  "otherServices": "Other services"
 }

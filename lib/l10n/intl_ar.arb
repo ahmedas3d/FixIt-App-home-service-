@@ -43,5 +43,14 @@
   "viewAll": "عرض الكل",
   "serviceProviders": "مقدمو الخدمة",
   "noProvidersAvailable": "لا توجد مزودين متاحين. يرجى المحاولة مرة أخرى لاحقًا.",
-  "details": "التفاصيل"
+  "details": "التفاصيل",
+  "plumbing": "السباكة",
+  "maintenance": "الصيانة",
+  "cleaning": "التنظيف",
+  "homeImprovement": "تحسين المنزل",
+  "security": "الامان",
+  "carMaintenance": "صيانة السيارات",
+  "handymanServices": "خدمات المهندسين",
+  "paintingServices": "خدمات الصيانة",
+  "otherServices": "خدمات اخرى"
 }

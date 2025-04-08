@@ -389,6 +389,76 @@ class S {
   String get details {
     return Intl.message('Details', name: 'details', desc: '', args: []);
   }
+
+  /// `Plumbing`
+  String get plumbing {
+    return Intl.message('Plumbing', name: 'plumbing', desc: '', args: []);
+  }
+
+  /// `Maintenance`
+  String get maintenance {
+    return Intl.message('Maintenance', name: 'maintenance', desc: '', args: []);
+  }
+
+  /// `Cleaning`
+  String get cleaning {
+    return Intl.message('Cleaning', name: 'cleaning', desc: '', args: []);
+  }
+
+  /// `Home Improvement`
+  String get homeImprovement {
+    return Intl.message(
+      'Home Improvement',
+      name: 'homeImprovement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Security`
+  String get security {
+    return Intl.message('Security', name: 'security', desc: '', args: []);
+  }
+
+  /// `Car Maintenance`
+  String get carMaintenance {
+    return Intl.message(
+      'Car Maintenance',
+      name: 'carMaintenance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Handyman Services`
+  String get handymanServices {
+    return Intl.message(
+      'Handyman Services',
+      name: 'handymanServices',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Painting Services`
+  String get paintingServices {
+    return Intl.message(
+      'Painting Services',
+      name: 'paintingServices',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Other services`
+  String get otherServices {
+    return Intl.message(
+      'Other services',
+      name: 'otherServices',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -29,6 +29,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "Already have an account?",
     ),
     "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+    "carMaintenance": MessageLookupByLibrary.simpleMessage("Car Maintenance"),
+    "cleaning": MessageLookupByLibrary.simpleMessage("Cleaning"),
     "descriptionOn1": MessageLookupByLibrary.simpleMessage(
       "Discover a world of convenience and reliability. FIXit is your one stop solution for all your home service needs",
     ),
@@ -61,18 +63,29 @@ class MessageLookup extends MessageLookupByLibrary {
     "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
     "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
     "google": MessageLookupByLibrary.simpleMessage("Google"),
+    "handymanServices": MessageLookupByLibrary.simpleMessage(
+      "Handyman Services",
+    ),
+    "homeImprovement": MessageLookupByLibrary.simpleMessage("Home Improvement"),
     "iAgreeWithFixItsTermAndConditions": MessageLookupByLibrary.simpleMessage(
       "I Agree With FixIt’s WeTrm & Conditions",
     ),
     "loginFailed": MessageLookupByLibrary.simpleMessage("Login Failed:"),
+    "maintenance": MessageLookupByLibrary.simpleMessage("Maintenance"),
     "newToFixIt": MessageLookupByLibrary.simpleMessage("New to fixIt?"),
     "next": MessageLookupByLibrary.simpleMessage("Next"),
     "noProvidersAvailable": MessageLookupByLibrary.simpleMessage(
       "No providers available. Please try again later.",
     ),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
+    "otherServices": MessageLookupByLibrary.simpleMessage("Other services"),
+    "paintingServices": MessageLookupByLibrary.simpleMessage(
+      "Painting Services",
+    ),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "plumbing": MessageLookupByLibrary.simpleMessage("Plumbing"),
     "popularServices": MessageLookupByLibrary.simpleMessage("Popular Services"),
+    "security": MessageLookupByLibrary.simpleMessage("Security"),
     "serviceProviders": MessageLookupByLibrary.simpleMessage(
       "Service Providers",
     ),

@@ -44,7 +44,7 @@ class PopularServicesSection extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 18),
+      padding: const EdgeInsets.only(left: 18),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: services.length,
@@ -72,7 +72,10 @@ class PopularServicesSection extends StatelessWidget {
                   const SizedBox(height: 8),
                   Text(
                     services[index].name,
-                    style: const TextStyle(fontSize: 14),
+                    style: const TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),

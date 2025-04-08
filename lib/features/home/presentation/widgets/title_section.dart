@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 
 class TitleSection extends StatelessWidget {
   final String title;
-  final String subtitle;
+  final String? subtitle;
   final VoidCallback? onPressed;
   const TitleSection({
     super.key,
     required this.title,
-    required this.subtitle,
+    this.subtitle,
     this.onPressed,
   });
 
@@ -21,12 +21,16 @@ class TitleSection extends StatelessWidget {
         children: [
           Text(
             title,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+              color: Color(0xff565656),
+            ),
           ),
           TextButton(
             onPressed: onPressed,
             child: Text(
-              subtitle,
+              subtitle ?? '',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
                 fontSize: 14,

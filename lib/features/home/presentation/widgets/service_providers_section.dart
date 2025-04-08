@@ -37,7 +37,7 @@ class ServiceProvidersSection extends StatelessWidget {
               errorWidget: (context, url, error) => const Icon(Icons.error),
               fit: BoxFit.cover,
               width: double.infinity,
-              height: 150,
+              height: 140,
             ),
             const SizedBox(height: 8),
             Text(

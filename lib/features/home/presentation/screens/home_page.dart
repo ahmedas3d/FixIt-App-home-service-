@@ -1,4 +1,5 @@
 import 'package:fixit_app/core/constants/constants.dart';
+import 'package:fixit_app/features/ServiceSection/presentation/screen/services_screen.dart';
 import 'package:fixit_app/features/home/data/home_cubit/home_cubit.dart';
 import 'package:fixit_app/features/home/data/repositories/service_provider_repository.dart';
 import 'package:fixit_app/features/home/presentation/widgets/popular_services_section.dart';
@@ -20,7 +21,7 @@ class HomeScreen extends StatelessWidget {
     final crossAxisSpacing = 8;
     final totalHorizontalSpacing = (crossAxisCount - 1) * crossAxisSpacing;
     final itemWidth = (screenWidth - totalHorizontalSpacing) / crossAxisCount;
-    final desiredItemHeight = screenHeight * 0.30;
+    final desiredItemHeight = screenHeight * 0.31;
     final childAspectRatio = itemWidth / desiredItemHeight;
     return Scaffold(
       backgroundColor: Colors.white,
@@ -57,7 +58,22 @@ class HomeScreen extends StatelessWidget {
               title: S.of(context).popularServices,
               subtitle: S.of(context).viewAll,
               onPressed: () {
-                // Handle view all button press
+                Navigator.push(
+                  context,
+                  PageRouteBuilder(
+                    pageBuilder:
+                        (context, animation, secondaryAnimation) =>
+                            ServicesScreen(),
+                    transitionsBuilder: (
+                      context,
+                      animation,
+                      secondaryAnimation,
+                      child,
+                    ) {
+                      return FadeTransition(opacity: animation, child: child);
+                    },
+                  ),
+                );
               },
             ),
             SizedBox(
