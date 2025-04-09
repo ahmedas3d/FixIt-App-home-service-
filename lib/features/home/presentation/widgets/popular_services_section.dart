@@ -33,7 +33,7 @@ class PopularServicesSection extends StatelessWidget {
       onPressed: () {},
     ),
     Service(
-      name: 'Air Conditioning',
+      name: 'Air Conditioner',
       iconPath: 'assets/icons/air_conditenior.png',
       onPressed: () {},
     ),

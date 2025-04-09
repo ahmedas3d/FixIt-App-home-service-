@@ -5,15 +5,11 @@ import 'package:fixit_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:fixit_app/Models/service_provider_model.dart';
 
-class ServiceProvidersSection extends StatelessWidget {
+class ServiceCard extends StatelessWidget {
   final ServiceProvider provider;
-  final VoidCallback onTap; // <-- أضف دي
+  final VoidCallback onTap;
 
-  const ServiceProvidersSection({
-    super.key,
-    required this.provider,
-    required this.onTap,
-  });
+  const ServiceCard({super.key, required this.provider, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +26,7 @@ class ServiceProvidersSection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CachedNetworkImage(
-              imageUrl: provider.image!,
+              imageUrl: provider.image ?? '',
               placeholder:
                   (context, url) =>
                       const Center(child: CircularProgressIndicator()),
@@ -39,7 +35,6 @@ class ServiceProvidersSection extends StatelessWidget {
               width: double.infinity,
               height: 140,
             ),
-            const SizedBox(height: 8),
             Text(
               provider.name,
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
@@ -73,7 +68,7 @@ class ServiceProvidersSection extends StatelessWidget {
                 ),
                 CustomButtonHome(
                   title: S.of(context).details,
-                  onTap: onTap, // <-- استخدم الكول باك هنا
+                  onTap: onTap,
                   color: AppColor.kPrimaryColor,
                   textColor: Colors.white,
                   textSize: 14,

@@ -31,7 +31,7 @@ class CustomSection extends StatelessWidget {
               return GestureDetector(
                 onTap: services[index].onPressed,
                 child: Container(
-                  width: screenWidth * 0.28,
+                  width: screenWidth * 0.29,
                   margin: const EdgeInsets.symmetric(horizontal: 4),
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(

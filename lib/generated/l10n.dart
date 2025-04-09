@@ -459,6 +459,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Service Provider`
+  String get serviceProvider {
+    return Intl.message(
+      'Service Provider',
+      name: 'serviceProvider',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Electrician Providers`
+  String get electricianProviders {
+    return Intl.message(
+      'Electrician Providers',
+      name: 'electricianProviders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Plumber Providers`
+  String get plumberProviders {
+    return Intl.message(
+      'Plumber Providers',
+      name: 'plumberProviders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Carpenter Providers`
+  String get carpenterProviders {
+    return Intl.message(
+      'Carpenter Providers',
+      name: 'carpenterProviders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Painter Providers`
+  String get painterProviders {
+    return Intl.message(
+      'Painter Providers',
+      name: 'painterProviders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cleaner Providers`
+  String get cleanerProviders {
+    return Intl.message(
+      'Cleaner Providers',
+      name: 'cleanerProviders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mover Providers`
+  String get moverProviders {
+    return Intl.message(
+      'Mover Providers',
+      name: 'moverProviders',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -52,5 +52,12 @@
   "carMaintenance": "صيانة السيارات",
   "handymanServices": "خدمات المهندسين",
   "paintingServices": "خدمات الصيانة",
-  "otherServices": "خدمات اخرى"
+  "otherServices": "خدمات اخرى",
+  "serviceProvider": "مقدمو الخدمة",
+  "electricianProviders": "مقدمو خدمات الكهربائية",
+  "plumberProviders": "مقدمو خدمات السباكة",
+  "carpenterProviders": "مقدمو خدمات النجارة",
+  "painterProviders": "مقدمو خدمات الطلاء",
+  "cleanerProviders": "مقدمو خدمات التنظيف",
+  "moverProviders": "مقدمو خدمات النقل"
 }

@@ -1,4 +1,5 @@
 import 'package:fixit_app/core/constants/constants.dart';
+import 'package:fixit_app/features/ServiceProvider/presentation/screen/services_provider_screen.dart';
 import 'package:fixit_app/features/ServiceSection/presentation/screen/services_screen.dart';
 import 'package:fixit_app/features/home/data/home_cubit/home_cubit.dart';
 import 'package:fixit_app/features/home/data/repositories/service_provider_repository.dart';
@@ -63,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                   PageRouteBuilder(
                     pageBuilder:
                         (context, animation, secondaryAnimation) =>
-                            ServicesScreen(),
+                            const ServicesScreen(),
                     transitionsBuilder: (
                       context,
                       animation,
@@ -77,14 +78,29 @@ class HomeScreen extends StatelessWidget {
               },
             ),
             SizedBox(
-              height: screenHeight * 0.13,
+              height: screenHeight * 0.14,
               child: PopularServicesSection(),
             ),
             TitleSection(
               title: S.of(context).serviceProviders,
               subtitle: S.of(context).viewAll,
               onPressed: () {
-                // Handle view all button press
+                Navigator.push(
+                  context,
+                  PageRouteBuilder(
+                    pageBuilder:
+                        (context, animation, secondaryAnimation) =>
+                            const ServiceProviderScreen(),
+                    transitionsBuilder: (
+                      context,
+                      animation,
+                      secondaryAnimation,
+                      child,
+                    ) {
+                      return FadeTransition(opacity: animation, child: child);
+                    },
+                  ),
+                );
               },
             ),
             BlocProvider(
@@ -97,7 +113,7 @@ class HomeScreen extends StatelessWidget {
                   if (state is HomeLoading) {
                     return SizedBox(
                       height: screenHeight * 0.30,
-                      child: Center(
+                      child: const Center(
                         child: SpinKitFadingCube(
                           color: AppColor.kPrimaryColor,
                           size: 20.0,

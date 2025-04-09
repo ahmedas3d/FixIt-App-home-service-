@@ -30,6 +30,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
     "carMaintenance": MessageLookupByLibrary.simpleMessage("صيانة السيارات"),
+    "carpenterProviders": MessageLookupByLibrary.simpleMessage(
+      "مقدمو خدمات النجارة",
+    ),
+    "cleanerProviders": MessageLookupByLibrary.simpleMessage(
+      "مقدمو خدمات التنظيف",
+    ),
     "cleaning": MessageLookupByLibrary.simpleMessage("التنظيف"),
     "descriptionOn1": MessageLookupByLibrary.simpleMessage(
       "اكتشف عالمًا من الراحة والموثوقية. FIXit هو حلاً واحدًا لجميع احتياجات خدمات المنزل الخاصة بك",
@@ -42,6 +48,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "details": MessageLookupByLibrary.simpleMessage("التفاصيل"),
     "discord": MessageLookupByLibrary.simpleMessage("ديسكورد"),
+    "electricianProviders": MessageLookupByLibrary.simpleMessage(
+      "مقدمو خدمات الكهربائية",
+    ),
     "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
     "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
     "enterYourEmail": MessageLookupByLibrary.simpleMessage(
@@ -72,6 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "loginFailed": MessageLookupByLibrary.simpleMessage("فشل تسجيل الدخول:"),
     "maintenance": MessageLookupByLibrary.simpleMessage("الصيانة"),
+    "moverProviders": MessageLookupByLibrary.simpleMessage("مقدمو خدمات النقل"),
     "newToFixIt": MessageLookupByLibrary.simpleMessage("جديد في FixIt؟"),
     "next": MessageLookupByLibrary.simpleMessage("التالي"),
     "noProvidersAvailable": MessageLookupByLibrary.simpleMessage(
@@ -79,11 +89,18 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "or": MessageLookupByLibrary.simpleMessage("أو"),
     "otherServices": MessageLookupByLibrary.simpleMessage("خدمات اخرى"),
+    "painterProviders": MessageLookupByLibrary.simpleMessage(
+      "مقدمو خدمات الطلاء",
+    ),
     "paintingServices": MessageLookupByLibrary.simpleMessage("خدمات الصيانة"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "plumberProviders": MessageLookupByLibrary.simpleMessage(
+      "مقدمو خدمات السباكة",
+    ),
     "plumbing": MessageLookupByLibrary.simpleMessage("السباكة"),
     "popularServices": MessageLookupByLibrary.simpleMessage("الخدمات الشائعة"),
     "security": MessageLookupByLibrary.simpleMessage("الامان"),
+    "serviceProvider": MessageLookupByLibrary.simpleMessage("مقدمو الخدمة"),
     "serviceProviders": MessageLookupByLibrary.simpleMessage("مقدمو الخدمة"),
     "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "signInNow": MessageLookupByLibrary.simpleMessage("تسجيل الدخول الآن"),

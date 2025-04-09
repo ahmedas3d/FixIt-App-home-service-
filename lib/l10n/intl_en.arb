@@ -52,5 +52,12 @@
   "carMaintenance": "Car Maintenance",
   "handymanServices": "Handyman Services",
   "paintingServices": "Painting Services",
-  "otherServices": "Other services"
+  "otherServices": "Other services",
+  "serviceProvider": "Service Provider",
+  "electricianProviders": "Electrician Providers",
+  "plumberProviders": "Plumber Providers",
+  "carpenterProviders": "Carpenter Providers",
+  "painterProviders": "Painter Providers",
+  "cleanerProviders": "Cleaner Providers",
+  "moverProviders": "Mover Providers"
 }

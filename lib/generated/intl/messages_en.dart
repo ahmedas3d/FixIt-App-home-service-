@@ -30,6 +30,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
     "carMaintenance": MessageLookupByLibrary.simpleMessage("Car Maintenance"),
+    "carpenterProviders": MessageLookupByLibrary.simpleMessage(
+      "Carpenter Providers",
+    ),
+    "cleanerProviders": MessageLookupByLibrary.simpleMessage(
+      "Cleaner Providers",
+    ),
     "cleaning": MessageLookupByLibrary.simpleMessage("Cleaning"),
     "descriptionOn1": MessageLookupByLibrary.simpleMessage(
       "Discover a world of convenience and reliability. FIXit is your one stop solution for all your home service needs",
@@ -42,6 +48,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "details": MessageLookupByLibrary.simpleMessage("Details"),
     "discord": MessageLookupByLibrary.simpleMessage("Discord"),
+    "electricianProviders": MessageLookupByLibrary.simpleMessage(
+      "Electrician Providers",
+    ),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "english": MessageLookupByLibrary.simpleMessage("English"),
     "enterYourEmail": MessageLookupByLibrary.simpleMessage("Enter your email"),
@@ -72,6 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "loginFailed": MessageLookupByLibrary.simpleMessage("Login Failed:"),
     "maintenance": MessageLookupByLibrary.simpleMessage("Maintenance"),
+    "moverProviders": MessageLookupByLibrary.simpleMessage("Mover Providers"),
     "newToFixIt": MessageLookupByLibrary.simpleMessage("New to fixIt?"),
     "next": MessageLookupByLibrary.simpleMessage("Next"),
     "noProvidersAvailable": MessageLookupByLibrary.simpleMessage(
@@ -79,13 +89,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
     "otherServices": MessageLookupByLibrary.simpleMessage("Other services"),
+    "painterProviders": MessageLookupByLibrary.simpleMessage(
+      "Painter Providers",
+    ),
     "paintingServices": MessageLookupByLibrary.simpleMessage(
       "Painting Services",
     ),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "plumberProviders": MessageLookupByLibrary.simpleMessage(
+      "Plumber Providers",
+    ),
     "plumbing": MessageLookupByLibrary.simpleMessage("Plumbing"),
     "popularServices": MessageLookupByLibrary.simpleMessage("Popular Services"),
     "security": MessageLookupByLibrary.simpleMessage("Security"),
+    "serviceProvider": MessageLookupByLibrary.simpleMessage("Service Provider"),
     "serviceProviders": MessageLookupByLibrary.simpleMessage(
       "Service Providers",
     ),
