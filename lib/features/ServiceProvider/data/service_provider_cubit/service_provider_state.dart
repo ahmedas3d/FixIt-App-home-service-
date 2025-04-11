@@ -8,7 +8,7 @@ final class ServiceProviderInitial extends ServiceProviderState {}
 class ServiceProviderLoading extends ServiceProviderState {}
 
 class ServiceProviderLoaded extends ServiceProviderState {
-  final List<ServiceProvider> providers;
+  final List<User> providers;
   ServiceProviderLoaded(this.providers);
 }
 

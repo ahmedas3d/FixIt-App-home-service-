@@ -53,7 +53,7 @@ class CustomBottomNavBar extends StatelessWidget {
                     isActive: selectedIndex == index,
                   ),
                   Text(
-                    bottomNavItems[index].title, // اسم العنصر
+                    bottomNavItems[index].title(context), // اسم العنصر
                     style: TextStyle(
                       color:
                           selectedIndex == index

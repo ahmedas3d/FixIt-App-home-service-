@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:fixit_app/Models/service_provider_model.dart';
 
 class ServiceProvidersSection extends StatelessWidget {
-  final ServiceProvider provider;
+  final User provider;
   final VoidCallback onTap; // <-- أضف دي
 
   const ServiceProvidersSection({

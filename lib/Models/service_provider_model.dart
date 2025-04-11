@@ -1,4 +1,4 @@
-class ServiceProvider {
+class User {
   final String id;
   final String name;
   final int phoneNumber;
@@ -14,7 +14,7 @@ class ServiceProvider {
   final int orders;
   final WorkHour workHour;
 
-  ServiceProvider({
+  User({
     required this.id,
     required this.name,
     required this.phoneNumber,
@@ -30,8 +30,8 @@ class ServiceProvider {
     required this.orders,
     required this.workHour,
   });
-  factory ServiceProvider.fromJson(Map<String, dynamic> json) {
-    return ServiceProvider(
+  factory User.fromJson(Map<String, dynamic> json) {
+    return User(
       id: json['_id'] as String,
       name: json['name'] as String,
       phoneNumber: json['phoneNumber'] as int,

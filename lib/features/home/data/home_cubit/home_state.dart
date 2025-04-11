@@ -7,7 +7,7 @@ class HomeInitial extends HomeState {}
 class HomeLoading extends HomeState {}
 
 class HomeLoaded extends HomeState {
-  final List<ServiceProvider> providers;
+  final List<User> providers;
   HomeLoaded(this.providers);
 }
 

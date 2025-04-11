@@ -59,5 +59,16 @@
   "carpenterProviders": "مقدمو خدمات النجارة",
   "painterProviders": "مقدمو خدمات الطلاء",
   "cleanerProviders": "مقدمو خدمات التنظيف",
-  "moverProviders": "مقدمو خدمات النقل"
+  "moverProviders": "مقدمو خدمات النقل",
+  "home": "الرئيسية",
+  "search": "بحث",
+  "orders": "الطلبات",
+  "profile": "الصفحة الشخصية",
+  "myprofile": "صفحتي الشخصية",
+  "editProfile": "تعديل الصفحة الشخصية",
+  "notification": "الإشعارات",
+  "paymentMethod": "طريقة الدفع",
+  "helpSupport": "المساعدة والدعم",
+  "aboutUs": "معلومات عنا",
+  "logout": "تسجيل الخروج"
 }

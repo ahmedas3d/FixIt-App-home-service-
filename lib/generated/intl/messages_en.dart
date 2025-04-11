@@ -48,6 +48,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "details": MessageLookupByLibrary.simpleMessage("Details"),
     "discord": MessageLookupByLibrary.simpleMessage("Discord"),
+    "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
     "electricianProviders": MessageLookupByLibrary.simpleMessage(
       "Electrician Providers",
     ),
@@ -75,19 +76,25 @@ class MessageLookup extends MessageLookupByLibrary {
     "handymanServices": MessageLookupByLibrary.simpleMessage(
       "Handyman Services",
     ),
+    "helpSupport": MessageLookupByLibrary.simpleMessage("Help & support"),
+    "home": MessageLookupByLibrary.simpleMessage("Home"),
     "homeImprovement": MessageLookupByLibrary.simpleMessage("Home Improvement"),
     "iAgreeWithFixItsTermAndConditions": MessageLookupByLibrary.simpleMessage(
       "I Agree With FixIt’s WeTrm & Conditions",
     ),
     "loginFailed": MessageLookupByLibrary.simpleMessage("Login Failed:"),
+    "logout": MessageLookupByLibrary.simpleMessage("Logout"),
     "maintenance": MessageLookupByLibrary.simpleMessage("Maintenance"),
     "moverProviders": MessageLookupByLibrary.simpleMessage("Mover Providers"),
+    "myprofile": MessageLookupByLibrary.simpleMessage("My Profile"),
     "newToFixIt": MessageLookupByLibrary.simpleMessage("New to fixIt?"),
     "next": MessageLookupByLibrary.simpleMessage("Next"),
     "noProvidersAvailable": MessageLookupByLibrary.simpleMessage(
       "No providers available. Please try again later.",
     ),
+    "notification": MessageLookupByLibrary.simpleMessage("Notification"),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
+    "orders": MessageLookupByLibrary.simpleMessage("Orders"),
     "otherServices": MessageLookupByLibrary.simpleMessage("Other services"),
     "painterProviders": MessageLookupByLibrary.simpleMessage(
       "Painter Providers",
@@ -96,11 +103,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "Painting Services",
     ),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "paymentMethod": MessageLookupByLibrary.simpleMessage("Payment method"),
     "plumberProviders": MessageLookupByLibrary.simpleMessage(
       "Plumber Providers",
     ),
     "plumbing": MessageLookupByLibrary.simpleMessage("Plumbing"),
     "popularServices": MessageLookupByLibrary.simpleMessage("Popular Services"),
+    "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+    "search": MessageLookupByLibrary.simpleMessage("Search"),
     "security": MessageLookupByLibrary.simpleMessage("Security"),
     "serviceProvider": MessageLookupByLibrary.simpleMessage("Service Provider"),
     "serviceProviders": MessageLookupByLibrary.simpleMessage(

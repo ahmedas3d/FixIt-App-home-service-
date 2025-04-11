@@ -59,5 +59,15 @@
   "carpenterProviders": "Carpenter Providers",
   "painterProviders": "Painter Providers",
   "cleanerProviders": "Cleaner Providers",
-  "moverProviders": "Mover Providers"
+  "moverProviders": "Mover Providers",
+  "home": "Home",
+  "search": "Search",
+  "orders": "Orders",
+  "profile": "Profile",
+  "myprofile": "My Profile",
+  "editProfile": "Edit Profile",
+  "notification": "Notification",
+  "paymentMethod": "Payment method",
+  "helpSupport": "Help & support",
+  "logout": "Logout"
 }

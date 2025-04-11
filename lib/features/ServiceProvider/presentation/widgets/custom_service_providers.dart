@@ -3,9 +3,9 @@ import 'package:fixit_app/features/ServiceProvider/presentation/widgets/services
 import 'package:flutter/material.dart';
 
 class CustomServiceProviders extends StatelessWidget {
-  final List<ServiceProvider> allProviders;
+  final List<User> allProviders;
   final String specialty;
-  final void Function(ServiceProvider) onTap;
+  final void Function(User) onTap;
 
   const CustomServiceProviders({
     super.key,
@@ -28,9 +28,8 @@ class CustomServiceProviders extends StatelessWidget {
       itemCount: filtered.length,
       itemBuilder: (context, index) {
         final provider = filtered[index];
-        return Container(
-          width: 180,
-          margin: const EdgeInsets.only(right: 8),
+        return SizedBox(
+          width: 185,
           child: ServiceCard(provider: provider, onTap: () => onTap(provider)),
         );
       },

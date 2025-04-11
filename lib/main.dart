@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:fixit_app/core/services/shared_preferenes/onboarding_service.dart';
 import 'package:fixit_app/core/services/supabase_setup.dart';
 import 'package:fixit_app/features/home/data/repositories/service_provider_repository.dart';
+import 'package:fixit_app/features/profile/data/repository/user_repo_get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -22,6 +23,7 @@ void main() async {
         RepositoryProvider(
           create: (context) => ServiceProviderRepository(Dio()),
         ),
+        RepositoryProvider(create: (context) => UserRepo(Dio())),
       ],
       child: FixitApp(
         showOnboarding: !isOnboardingCompleted,

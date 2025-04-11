@@ -1,5 +1,6 @@
 import 'package:fixit_app/core/widgets/BottomNavBar/custom_bottom_nav_bar.dart';
 import 'package:fixit_app/features/home/presentation/screens/home_page.dart';
+import 'package:fixit_app/features/profile/presentation/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -17,7 +18,7 @@ class _MainScreenState extends State<MainScreen> {
     const HomeScreen(),
     const Center(child: Text('Search Screen')),
     const Center(child: Text('Favorites Screen')),
-    const Center(child: Text('Profile Screen')),
+    const ProfileScreen(),
   ];
 
   void _onTabChange(int index) {

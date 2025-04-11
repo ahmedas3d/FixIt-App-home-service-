@@ -12,7 +12,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 class ServiceProviderScreen extends StatelessWidget {
   const ServiceProviderScreen({super.key});
 
-  Future<List<ServiceProvider>> fetchProviders() async {
+  Future<List<User>> fetchProviders() async {
     final repo = ServiceProviderRepository(Dio());
     return await repo.getServiceProviders();
   }
@@ -32,7 +32,7 @@ class ServiceProviderScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 8, bottom: 18),
-        child: FutureBuilder<List<ServiceProvider>>(
+        child: FutureBuilder<List<User>>(
           future: fetchProviders(),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
@@ -52,7 +52,7 @@ class ServiceProviderScreen extends StatelessWidget {
               children: [
                 TitleSection(title: S.of(context).electricianProviders),
                 SizedBox(
-                  height: 200.w,
+                  height: 190.h,
                   child: CustomServiceProviders(
                     allProviders: allProviders,
                     specialty: "Electrician", // حدد التخصص
@@ -63,7 +63,7 @@ class ServiceProviderScreen extends StatelessWidget {
                 ),
                 TitleSection(title: S.of(context).plumberProviders),
                 SizedBox(
-                  height: 200.w,
+                  height: 190.h,
                   child: CustomServiceProviders(
                     allProviders: allProviders,
                     specialty: "Plumber", // حدد التخصص
@@ -74,7 +74,7 @@ class ServiceProviderScreen extends StatelessWidget {
                 ),
                 TitleSection(title: S.of(context).carpenterProviders),
                 SizedBox(
-                  height: 200.w,
+                  height: 190.h,
                   child: CustomServiceProviders(
                     allProviders: allProviders,
                     specialty: "Carpenter", // حدد التخصص
@@ -85,7 +85,7 @@ class ServiceProviderScreen extends StatelessWidget {
                 ),
                 TitleSection(title: S.of(context).cleanerProviders),
                 SizedBox(
-                  height: 200.w,
+                  height: 190.h,
                   child: CustomServiceProviders(
                     allProviders: allProviders,
                     specialty: "Cleaner", // حدد التخصص
@@ -96,7 +96,7 @@ class ServiceProviderScreen extends StatelessWidget {
                 ),
                 TitleSection(title: S.of(context).painterProviders),
                 SizedBox(
-                  height: 200.w,
+                  height: 190.h,
                   child: CustomServiceProviders(
                     allProviders: allProviders,
                     specialty: "Painter", // حدد التخصص
@@ -107,7 +107,7 @@ class ServiceProviderScreen extends StatelessWidget {
                 ),
                 TitleSection(title: S.of(context).moverProviders),
                 SizedBox(
-                  height: 200.w,
+                  height: 190.h,
                   child: CustomServiceProviders(
                     allProviders: allProviders,
                     specialty: "Mover", // حدد التخصص

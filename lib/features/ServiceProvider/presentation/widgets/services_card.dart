@@ -4,9 +4,10 @@ import 'package:fixit_app/features/home/presentation/widgets/custom_button_home.
 import 'package:fixit_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:fixit_app/Models/service_provider_model.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ServiceCard extends StatelessWidget {
-  final ServiceProvider provider;
+  final User provider;
   final VoidCallback onTap;
 
   const ServiceCard({super.key, required this.provider, required this.onTap});
@@ -17,7 +18,7 @@ class ServiceCard extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 5),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(8.r),
         border: Border.all(color: Colors.grey[300]!, width: 1.5),
       ),
       child: Padding(
@@ -33,7 +34,7 @@ class ServiceCard extends StatelessWidget {
               errorWidget: (context, url, error) => const Icon(Icons.error),
               fit: BoxFit.cover,
               width: double.infinity,
-              height: 140,
+              height: 100.h,
             ),
             Text(
               provider.name,
