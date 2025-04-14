@@ -29,10 +29,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "لديك حساب بالفعل؟",
     ),
     "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+    "cameraPermission": MessageLookupByLibrary.simpleMessage(
+      "يجب السماح باستخدام الكاميرا",
+    ),
     "carMaintenance": MessageLookupByLibrary.simpleMessage("صيانة السيارات"),
     "carpenterProviders": MessageLookupByLibrary.simpleMessage(
       "مقدمو خدمات النجارة",
     ),
+    "chosseCamera": MessageLookupByLibrary.simpleMessage("بالكاميرا"),
+    "chosseGallery": MessageLookupByLibrary.simpleMessage("معرض الصور"),
     "cleanerProviders": MessageLookupByLibrary.simpleMessage(
       "مقدمو خدمات التنظيف",
     ),
@@ -73,6 +78,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
     "fullName": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
+    "galleryPermission": MessageLookupByLibrary.simpleMessage(
+      "يجب السماح بالوصول للصور",
+    ),
     "getStarted": MessageLookupByLibrary.simpleMessage("ابدأ"),
     "google": MessageLookupByLibrary.simpleMessage("جوجل"),
     "handymanServices": MessageLookupByLibrary.simpleMessage("خدمات المهندسين"),
@@ -110,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "profile": MessageLookupByLibrary.simpleMessage("الصفحة الشخصية"),
     "search": MessageLookupByLibrary.simpleMessage("بحث"),
     "security": MessageLookupByLibrary.simpleMessage("الامان"),
+    "selectCountry": MessageLookupByLibrary.simpleMessage("اختر الدولة"),
     "serviceProvider": MessageLookupByLibrary.simpleMessage("مقدمو الخدمة"),
     "serviceProviders": MessageLookupByLibrary.simpleMessage("مقدمو الخدمة"),
     "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),

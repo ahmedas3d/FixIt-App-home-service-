@@ -599,6 +599,61 @@ class S {
   String get logout {
     return Intl.message('Logout', name: 'logout', desc: '', args: []);
   }
+
+  /// `The data has been updated successfully`
+  String get updataData {
+    return Intl.message(
+      'The data has been updated successfully',
+      name: 'updataData',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Country`
+  String get selectCountry {
+    return Intl.message(
+      'Select Country',
+      name: 'selectCountry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save Data`
+  String get saveDate {
+    return Intl.message('Save Data', name: 'saveDate', desc: '', args: []);
+  }
+
+  /// `Camera`
+  String get chosseCamera {
+    return Intl.message('Camera', name: 'chosseCamera', desc: '', args: []);
+  }
+
+  /// `Camera permission is required to take photos`
+  String get cameraPermission {
+    return Intl.message(
+      'Camera permission is required to take photos',
+      name: 'cameraPermission',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gallery`
+  String get chosseGallery {
+    return Intl.message('Gallery', name: 'chosseGallery', desc: '', args: []);
+  }
+
+  /// `Gallery permission is required to choose photos from the gallery`
+  String get galleryPermission {
+    return Intl.message(
+      'Gallery permission is required to choose photos from the gallery',
+      name: 'galleryPermission',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

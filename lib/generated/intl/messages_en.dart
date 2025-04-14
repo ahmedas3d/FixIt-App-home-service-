@@ -29,10 +29,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Already have an account?",
     ),
     "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+    "cameraPermission": MessageLookupByLibrary.simpleMessage(
+      "Camera permission is required to take photos",
+    ),
     "carMaintenance": MessageLookupByLibrary.simpleMessage("Car Maintenance"),
     "carpenterProviders": MessageLookupByLibrary.simpleMessage(
       "Carpenter Providers",
     ),
+    "chosseCamera": MessageLookupByLibrary.simpleMessage("Camera"),
+    "chosseGallery": MessageLookupByLibrary.simpleMessage("Gallery"),
     "cleanerProviders": MessageLookupByLibrary.simpleMessage(
       "Cleaner Providers",
     ),
@@ -71,6 +76,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
     "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "galleryPermission": MessageLookupByLibrary.simpleMessage(
+      "Gallery permission is required to choose photos from the gallery",
+    ),
     "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
     "google": MessageLookupByLibrary.simpleMessage("Google"),
     "handymanServices": MessageLookupByLibrary.simpleMessage(
@@ -110,8 +118,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "plumbing": MessageLookupByLibrary.simpleMessage("Plumbing"),
     "popularServices": MessageLookupByLibrary.simpleMessage("Popular Services"),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+    "saveDate": MessageLookupByLibrary.simpleMessage("Save Data"),
     "search": MessageLookupByLibrary.simpleMessage("Search"),
     "security": MessageLookupByLibrary.simpleMessage("Security"),
+    "selectCountry": MessageLookupByLibrary.simpleMessage("Select Country"),
     "serviceProvider": MessageLookupByLibrary.simpleMessage("Service Provider"),
     "serviceProviders": MessageLookupByLibrary.simpleMessage(
       "Service Providers",
@@ -125,6 +135,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "successSignUp": MessageLookupByLibrary.simpleMessage("Sign Up Success!"),
     "titleOn2": MessageLookupByLibrary.simpleMessage("Find Services"),
     "titleOn3": MessageLookupByLibrary.simpleMessage("Book Services"),
+    "updataData": MessageLookupByLibrary.simpleMessage(
+      "The data has been updated successfully",
+    ),
     "verificationEmailSent": MessageLookupByLibrary.simpleMessage(
       "Verification Email Sent!",
     ),

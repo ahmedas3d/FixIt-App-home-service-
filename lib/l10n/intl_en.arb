@@ -69,5 +69,12 @@
   "notification": "Notification",
   "paymentMethod": "Payment method",
   "helpSupport": "Help & support",
-  "logout": "Logout"
+  "logout": "Logout",
+  "updataData": "The data has been updated successfully",
+  "selectCountry": "Select Country",
+  "saveDate": "Save Data",
+  "chosseCamera": "Camera",
+  "cameraPermission": "Camera permission is required to take photos",
+  "chosseGallery": "Gallery",
+  "galleryPermission": "Gallery permission is required to choose photos from the gallery"
 }

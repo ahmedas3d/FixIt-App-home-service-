@@ -11,7 +11,7 @@ class User {
   final String bio;
   final double rating;
   final List<String> skills;
-  final int orders;
+  final int ordersNumber;
   final WorkHour workHour;
 
   User({
@@ -27,7 +27,7 @@ class User {
     required this.bio,
     required this.rating,
     required this.skills,
-    required this.orders,
+    required this.ordersNumber,
     required this.workHour,
   });
   factory User.fromJson(Map<String, dynamic> json) {
@@ -44,7 +44,7 @@ class User {
       bio: json['bio'] as String,
       rating: (json['rating'] as num).toDouble(),
       skills: List<String>.from(json['skills'] as List),
-      orders: json['orders'] as int,
+      ordersNumber: json['orders'] as int,
       workHour: WorkHour.fromJson(json['workHour'] as Map<String, dynamic>),
     );
   }
@@ -62,7 +62,7 @@ class User {
       'bio': bio,
       'rating': rating,
       'skills': skills,
-      'orders': orders,
+      'orders': ordersNumber,
       'workHour': workHour.toJson(),
     };
   }

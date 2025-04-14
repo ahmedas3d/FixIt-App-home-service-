@@ -1,4 +1,6 @@
 import 'package:fixit_app/core/constants/constants.dart';
+import 'package:fixit_app/core/widgets/translate_button.dart';
+import 'package:fixit_app/features/profile/presentation/widgets/edit_profile.dart';
 import 'package:fixit_app/features/profile/presentation/widgets/logout_row.dart';
 import 'package:fixit_app/features/profile/presentation/widgets/name_iamge_profile.dart';
 import 'package:fixit_app/features/profile/presentation/widgets/row_setting.dart';
@@ -21,6 +23,7 @@ class ProfileScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.white,
         foregroundColor: AppColor.kPrimaryColor,
+        actions: const [TranslateButton()],
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -35,7 +38,24 @@ class ProfileScreen extends StatelessWidget {
             RowSetting(
               title: S.of(context).editProfile,
               icon: FontAwesomeIcons.penToSquare,
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  PageRouteBuilder(
+                    pageBuilder:
+                        (context, animation, secondaryAnimation) =>
+                            const EditProfile(),
+                    transitionsBuilder: (
+                      context,
+                      animation,
+                      secondaryAnimation,
+                      child,
+                    ) {
+                      return FadeTransition(opacity: animation, child: child);
+                    },
+                  ),
+                );
+              },
             ),
             RowSetting(
               title: S.of(context).notification,

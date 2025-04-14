@@ -23,7 +23,7 @@ class SignInScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         title: Image.asset('assets/images/logo.png', height: 40),
-        actions: [TranslateButton()],
+        actions: [const TranslateButton()],
       ),
       body: SafeArea(
         child: Padding(
@@ -33,7 +33,7 @@ class SignInScreen extends StatelessWidget {
               const SizedBox(height: 20),
               Text(
                 S.of(context).enterYourEmailAndPasswordToLogin,
-                style: TextStyle(fontSize: 26),
+                style: const TextStyle(fontSize: 26),
               ),
               const SizedBox(height: 20),
               // Sign in form
@@ -44,7 +44,7 @@ class SignInScreen extends StatelessWidget {
                 children: [
                   Text(
                     S.of(context).newToFixIt,
-                    style: TextStyle(fontSize: 18),
+                    style: const TextStyle(fontSize: 18),
                   ),
                   TextButton(
                     onPressed: () {
@@ -53,7 +53,7 @@ class SignInScreen extends StatelessWidget {
                         PageRouteBuilder(
                           pageBuilder:
                               (context, animation, secondaryAnimation) =>
-                                  SignUpScreen(),
+                                  const SignUpScreen(),
                           transitionsBuilder: (
                             context,
                             animation,
@@ -70,12 +70,15 @@ class SignInScreen extends StatelessWidget {
                     },
                     child: Text(
                       S.of(context).signUpNow,
-                      style: TextStyle(fontSize: 18, color: Color(0xff0054A5)),
+                      style: const TextStyle(
+                        fontSize: 18,
+                        color: Color(0xff0054A5),
+                      ),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 children: [
                   Expanded(
@@ -85,7 +88,10 @@ class SignInScreen extends StatelessWidget {
                       endIndent: 10,
                     ),
                   ),
-                  Text(S.of(context).or, style: TextStyle(color: Colors.black)),
+                  Text(
+                    S.of(context).or,
+                    style: const TextStyle(color: Colors.black),
+                  ),
                   Expanded(
                     child: Divider(
                       color: Colors.grey[400],

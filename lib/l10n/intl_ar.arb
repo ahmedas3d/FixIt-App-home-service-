@@ -70,5 +70,12 @@
   "paymentMethod": "طريقة الدفع",
   "helpSupport": "المساعدة والدعم",
   "aboutUs": "معلومات عنا",
-  "logout": "تسجيل الخروج"
+  "logout": "تسجيل الخروج",
+  "updateData": "تم تحديث البيانات بنجاح",
+  "selectCountry": "اختر الدولة",
+  "saveData": "حفظ البيانات",
+  "chosseCamera": "بالكاميرا",
+  "cameraPermission": "يجب السماح باستخدام الكاميرا",
+  "chosseGallery": "معرض الصور",
+  "galleryPermission": "يجب السماح بالوصول للصور"
 }

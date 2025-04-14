@@ -46,12 +46,12 @@ class _SignInFormState extends State<SignInForm> {
             onPressed: () {},
             child: Text(
               S.of(context).forgotPassword,
-              style: TextStyle(color: Color(0xff0054A5), fontSize: 16),
+              style: const TextStyle(color: Color(0xff0054A5), fontSize: 16),
             ),
           ),
           const SizedBox(height: 15),
           customButton(
-            color: Color(0xff0054A5),
+            color: const Color(0xff0054A5),
             textColor: Colors.white,
             title: S.of(context).signIn,
             onTap: () async {
@@ -83,7 +83,7 @@ class _SignInFormState extends State<SignInForm> {
                       PageRouteBuilder(
                         pageBuilder:
                             (context, animation, secondaryAnimation) =>
-                                HomeScreen(),
+                                const HomeScreen(),
                         transitionsBuilder: (
                           context,
                           animation,
