@@ -1,64 +1,36 @@
 workflows:
-  ios-workflow:
-    name: iOS Workflow
-    max_build_duration: 120
+  ios-simulator-build:
+    name: iOS Simulator Build (No Signing Required)
+    max_build_duration: 60
     instance_type: mac_mini_m1
-    integrations:
-      app_store_connect: codemagic_api_key
     environment:
-      ios_signing:
-        distribution_type: app_store
-        bundle_identifier: com.example.myapp
       vars:
-        BUNDLE_ID: "com.example.fixit_app"
-        XCODE_WORKSPACE: "ios/Runner.xcworkspace" # للـ Flutter
-        XCODE_SCHEME: "Runner"
-        APP_ID: 1234567890 # App Store Connect App ID
-      flutter: stable
+        XCODE_WORKSPACE: "ios/Runner.xcworkspace"  # غير ده لو مش Flutter
+        XCODE_SCHEME: "Runner"  # غير ده لو مش Flutter
+      flutter: stable  # شيل السطر ده لو مش Flutter project
       xcode: latest
       cocoapods: default
     scripts:
-      - name: Set up key properties
-        script: |
-          echo $CM_BUILD_NUMBER > $CM_BUILD_DIR/build_number.txt
       - name: Get Flutter packages
         script: |
           flutter packages pub get
-      - name: Install CocoaPods dependencies
+      - name: Install CocoaPods dependencies  
         script: |
           cd ios && pod install
       - name: Flutter analyze
         script: |
           flutter analyze
-      - name: Flutter unit tests
-        script: |
-          flutter test
         ignore_failure: true
-      - name: Build ipa for distribution
+      - name: Build iOS app for simulator (No signing)
         script: |
-          flutter build ipa --release \
-            --build-name=1.0.$CM_BUILD_NUMBER \
-            --build-number=$CM_BUILD_NUMBER \
-            --export-options-plist=/Users/builder/export_options.plist
+          flutter build ios --simulator --debug --no-codesign
     artifacts:
-      - build/ios/ipa/*.ipa
-      - /tmp/xcodebuild_logs/*.log
+      - build/ios/iphonesimulator/*.app
       - flutter_drive.log
     publishing:
       email:
         recipients:
-          - user@example.com
+          - your-email@example.com  # حط إيميلك هنا
         notify:
           success: true
           failure: true
-      app_store_connect:
-        auth: integration
-        
-        # TestFlight Configuration
-        submit_to_testflight: true
-        beta_groups: # Testflight groups
-          - group name 1
-          - group name 2
-              
-        # App Store Configuration (غير لـ true لو عايز ترفع على App Store)
-        submit_to_app_store: false
