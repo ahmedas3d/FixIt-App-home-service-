@@ -7,7 +7,7 @@ workflows:
       app_store_connect: codemagic_api_key
     environment:
       ios_signing:
-        distribution_type: app_store
+        distribution_type: fixit_app
         bundle_identifier: com.example.fixit_app  # غير ده للـ bundle ID بتاعك
       vars:
         BUNDLE_ID: "com.example.fixit_app"  # نفس الـ bundle ID
