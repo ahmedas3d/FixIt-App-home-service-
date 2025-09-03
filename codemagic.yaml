@@ -8,9 +8,9 @@ workflows:
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.example.myapp  # غير ده للـ bundle ID بتاعك
+        bundle_identifier: com.example.fixit_app  # غير ده للـ bundle ID بتاعك
       vars:
-        BUNDLE_ID: "com.example.myapp"  # نفس الـ bundle ID
+        BUNDLE_ID: "com.example.fixit_app"  # نفس الـ bundle ID
         XCODE_WORKSPACE: "ios/Runner.xcworkspace" # للـ Flutter
         XCODE_SCHEME: "Runner"
         APP_ID: 1234567890 # App Store Connect App ID
