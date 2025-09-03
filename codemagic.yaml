@@ -8,7 +8,7 @@ workflows:
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.example.fixit_app
+        bundle_identifier: com.example.myapp
       vars:
         BUNDLE_ID: "com.example.fixit_app"
         XCODE_WORKSPACE: "ios/Runner.xcworkspace" # للـ Flutter
